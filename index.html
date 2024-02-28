@@ -74,8 +74,14 @@
     </div>
     <div class="headerBox container-lg mx-auto p-0">
       <div class="scroll" style="grid-area: scroll;">
-        <p style="font-size: 1.2rem;">Stockholm, Sweden<span class="spanBorder rounded-pill tag mono"
-            style="margin-left: 10px;" id="dateTime"></span></p>
+        <div style="height: 30px;" class="d-flex mb-3 flex-row">
+          <p style="height: 30px;">Stockholm, Sweden<span class="spanBorder rounded-pill tag mono"
+              style="margin-left: 10px;" id="dateTime"></span></p>
+          <div class="onlineBar rounded-pill spanBorder align-items-center d-flex flex-row justify-content-between">
+            <div class="greenCircle ms-1 rounded-circle"></div>
+            <p class="ms-1 m-0 mono">Online</p>
+          </div>
+        </div>
         <div class="wrappertitle col">
           <p style="font-size: 2.6rem;">
             Sarah Emmoth is a
@@ -129,15 +135,33 @@
           alt="Image of a woman with shoulder length dark brown hair and glasses giving a thumbs up.">
       </div>
       <div class="bento3 rounded overflow-hidden"></div>
-      <div class="bento4 customBorder mx-auto p-4 rounded overflow-hidden">
-        <div style="z-index: 2;" class="float-end text-end d-block position-relative">
-          <p class="cursive">Find me @Linkedin, I'm thrilled to connect with potential collaborators.
-          </p>
-          <a class="button hvr-grow-shadow customBorder rounded p-3 mt-2"
-            href="https://www.linkedin.com/in/sarah-emmoth-696131206/" target="_blank" role="button">Connect</a>
+      <div class="bento4 text-end d-flex flex-column rounded overflow-hidden">
+        <div class="d-flex text-start col-12 flex-column">
+          <h3>My process</h3>
+          <div id="process" class="d-flex gap-3 mt-2 flex-row w-100">
+            <div class="col-4 rounded d-flex p-2 flex-column justify-content-between">
+              <h3>01.</h3>
+              <p class="cursive m-0">Research</p>
+              <p class="text-center" style="font-size: 4rem;">&#9997;</p>
+            </div>
+            <div class="col-4 rounded d-flex p-2 flex-column justify-content-between">
+              <h3>02.</h3>
+              <p class="cursive m-0">Empathize</p>
+              <p class="text-center" style="font-size: 4rem;">&#128490;</p>
+            </div>
+            <div class="col-4 rounded d-flex p-2 flex-column justify-content-between">
+              <h3>03.</h3>
+              <p class="cursive m-0">Test</p>
+              <p class="text-center" style="font-size: 4rem;">&#128203;</p>
+            </div>
+            <div class="col-4 rounded d-flex p-2 flex-column justify-content-between">
+              <h3>04.</h3>
+              <p class="cursive m-0">Develop</p>
+              <p class="text-center" style="font-size: 4rem;">&#128187;</p>
+            </div>
+          </div>
         </div>
-        <img style="width: 150px; z-index:0;" class="img-fluid position-absolute bottom-0 mb-5"
-          src="assets/img/heart.webp" alt="">
+
       </div>
     </div>
   </section>
@@ -160,7 +184,9 @@
           <li class="tag spanBorder rounded p-2 customBorder">Prototyping</li>
           <li class="tag spanBorder rounded p-2 customBorder">User interviews</li>
           <li class="tag spanBorder rounded p-2 customBorder">A/B testing</li>
-          <li class="tag spanBorder rounded p-2 customBorder">Card sorting</li>
+          <li class="tag spanBorder rounded p-2 customBorder">User testing</li>
+
+
         </ul>
       </div>
     </div>
@@ -244,14 +270,15 @@
   </section>
   <section class="m-0 mt-5 container-lg mx-auto p-0 flex-column d-flex">
     <footer class="border-bottom-0 rounded-top customBG customBorder">
-      <div class="mt-2 contact p-4">
-        <h2 style="font-size: 2.5rem;" class="headline">Want to chat?</h2>
-        <a class="cursive chat" href="mailto:sarah.emmoth@gmail.com">Get in touch!
-        </a>
-        <img class="footerArrow mb-3" src="assets/img/arrowRight.webp"
-          alt="arrow pointing downward left">
+      <div class="d-flex flex-row justify-content-between">
+        <div class="mt-2 contact p-4 col-6">
+          <h2 style="font-size: 2.5rem;" class="headline">Want to chat?</h2>
+          <a class="cursive chat" href="mailto:sarah.emmoth@gmail.com">Get in touch!
+          </a>
+          <img class="footerArrow mb-3" src="assets/img/arrowRight.webp" alt="arrow pointing downward left">
+        </div>
       </div>
-      <div class="w-100 cr">
+      <div class="w-100">
         <p class="bottom-0 m-0 p-4 position-absolute "> © 2023 Sarah Emmoth - <span class="mono"> Crafted with ❤️</span>
         </p>
       </div>

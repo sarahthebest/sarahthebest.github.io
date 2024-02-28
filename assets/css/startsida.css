@@ -5,6 +5,7 @@
     position: relative;
     overflow: hidden;
   }
+
   .headerBox {
     display: flex;
     flex-direction: column;
@@ -12,20 +13,32 @@
     margin-left: 0;
     margin-top: 3vh;
   }
+
   .bento1 {
     padding: 20px;
     grid-column: span 2;
   }
+
   .bento2 {
     grid-column: span 1;
     max-height: 350px;
   }
+
   .bento4 {
     grid-column: span 2;
-    max-height: 300px;
     width: 100%;
     min-height: 200px;
   }
+  .col-4{
+    height: 210px;
+    margin-top: 40px;
+    width: 13vw;
+  }
+
+  #process{
+    flex-wrap: nowrap;
+  }
+
   .about-me {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -33,62 +46,83 @@
     justify-content: center;
     height: 300px;
   }
+
   .container-lg {
     position: relative;
   }
+
   #bootstrap-overrides h4 {
     margin-top: 0;
   }
 }
+
 /* medium */
 @media screen and (max-width: 1000px) {
   .content-to-hide {
     display: none;
   }
+
   #bootstrap-overrides .headerBox {
     grid-template-areas: "scroll" "greeting";
     margin-left: 3vw !important;
   }
+
   #bootstrap-overrides h2 {
     margin-top: none;
   }
+
   .bento {
     grid-template-columns: auto;
     grid-auto-flow: row;
     padding-top: 20px;
     padding-bottom: 20px;
+    height: 1000px;
   }
+
   .bento2 {
     grid-column: span 1;
     max-height: 300px;
   }
+
   .bento1 {
     grid-column: span 3;
     padding: 20px;
     height: 400px;
+    min-height: 470px;
   }
+
   .bento3 {
     grid-column: span 2;
   }
+
   .bento4 {
     grid-column: span 3;
-    max-height: 300px;
-    height: 250px;
+    max-height: 350px;
+    height: 260px;
     min-height: 200px;
   }
+  .col-4{
+    margin-top: 10px;
+    height: 210px;
+    width: 22vw;
+  }
+
   .textDeco,
   .textDecoLeft {
     margin-top: none;
   }
+
   #bg {
     height: 100%;
   }
 }
+
 /*  small screen */
 @media screen and (max-width: 600px) {
   #bootstrap-overrides .container-lg {
     width: 100%;
   }
+
   #bootstrap-overrides .container {
     width: 100%;
   }
@@ -99,34 +133,54 @@
     grid-template-columns: 100%;
     grid-template-rows: repeat(auto-fit);
   }
+
   .card {
     width: fit-content;
   }
+
   #bootstrap-overrides .headerBox {
     margin-left: 0 !important;
+  }
+  .bento{
+    height: 1400px;
   }
   .bento1 {
     height: 400px;
   }
+
+  .bento2 {
+    grid-column: span 2;
+  }
   .bento3 {
     grid-column: span 1;
   }
-  .bento2 {
-    grid-column: span 2;
+  .bento4 {
+    height: 400px;
+    min-height: 440px;
+  }
+  .col-4{
+    margin-top: 10px;
+    height: 180px;
+    width: 42vw;
+  }
+  #process{
+    flex-wrap: wrap;
   }
   .header {
     border: none;
   }
+
   .rect {
     margin-left: auto;
     margin-right: auto;
   }
+
   .scroll {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 400px;
+    margin-left: auto;margin-right: auto;
+    max-width: 500px;
     min-width: 370;
   }
+
   .skill {
     margin-top: 0;
   }
@@ -137,6 +191,7 @@
     background-color: rgba(245, 245, 245, 0.389);
     backdrop-filter: blur(5px);
   }
+
   #velocity {
     padding: 0;
   }
@@ -172,10 +227,11 @@
   background-color: var(--bg);
   z-index: 3;
 }
+
 .bento {
+  height: fit-content;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  grid-template-rows: auto-fit;
   grid-template-columns: repeat(3, minmax(0, 2fr));
   grid-auto-columns: 1fr;
   display: grid;
@@ -186,6 +242,7 @@
 .bento2 {
   max-width: 300px;
 }
+
 .bento3 {
   height: 300px;
   max-height: 300px;
@@ -195,18 +252,45 @@
   background-size: cover;
   background-position: bottom;
 }
+
 .bento4 {
-  background-image: radial-gradient(
-      at 100% 0%,
-    hsla(10, 77%, 55%, 0.491) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 0% 100%, hsla(276, 69%, 35%, 0.457) 0px, transparent 50%);
+  overflow-wrap: normal;
 }
+
+.onlineBar {
+  margin-left: 10px;
+  height: 31px;
+}
+
+.greenCircle {
+  width: 15px;
+  height: 15px;
+  background-color: green;
+}
+
+.onlineBar:hover>.greenCircle {
+  background-color: var(--orange);
+}
+
+.onlineBar > p{
+  font-family: 'Rainy Hearts';
+  color: var(--light);
+}
+
+.onlineBar:hover>p {
+  color: var(--orange);
+}
+
+.col-4{
+  overflow: hidden;
+  background-color: var(--dark);
+}
+
 li {
   font-size: 1.5rem;
   list-style: none;
 }
+
 .textDeco,
 .textDecoLeft,
 .arrow {
@@ -228,18 +312,17 @@ li {
 
 .list {
   display: inline;
-  width: 70%;
+  width: 80%;
 }
 
 .right-box {
   height: fit-content;
+  overflow: hidden;
   align-self: center;
 }
 
 .tag {
-  width: fit-content;
-  margin-top: 5px;
-  margin-left: 5px;
+  margin-top: 5px;margin-left: 5px;
   font-size: 1.5rem;
   font-family: "Rainy Hearts", sans-serif;
 }
@@ -250,6 +333,10 @@ li {
 
 .techLogo {
   width: 50px;
+}
+
+.socLogo{
+  width: 40px;
 }
 
 .tech {
@@ -313,7 +400,13 @@ body.DarkToLight .case {
   border-bottom: 1px solid var(--dark);
 }
 
-body.DarkToLight .scroller > span {
+body.DarkToLight .scroller>span {
+  color: var(--dark);
+}
+body.LightToDark .onlineBar:hover > p {
+  color: var(--orange);
+}
+body.LightToDark .onlineBar> p {
   color: var(--dark);
 }
 
@@ -326,9 +419,11 @@ body.DarkToLight .tag:hover {
 }
 
 body.DarkToLight .cardHole,
-body.DarkToLight .rect {
+body.DarkToLight .rect,
+body.DarkToLight .col-4 {
   background-color: var(--light);
 }
+
 body.DarkToLight .textDeco,
 body.DarkToLight .textDecoLeft,
 body.DarkToLight .arrow {
@@ -343,6 +438,7 @@ body.DarkToLight .button {
 #bootstrap-overrides body.DarkToLight .button:hover {
   color: var(--dark);
 }
+
 body.DarkToLight .scroller {
   border-left: 0;
   border-right: 0;
@@ -359,7 +455,7 @@ body.DarkToLight .scroller {
   border-right: 0 !important;
 }
 
-.scroller > span {
+.scroller>span {
   position: absolute;
   top: 0;
   animation: slide 5s infinite;
@@ -372,12 +468,15 @@ body.DarkToLight .scroller {
   0% {
     top: 0;
   }
+
   25% {
     top: -4.2rem;
   }
+
   50% {
     top: -8rem;
   }
+
   75% {
     top: -12rem;
   }
