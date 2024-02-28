@@ -29,12 +29,15 @@
     width: 100%;
     min-height: 200px;
   }
-  .col-4{
-    height: 210px;
-    margin-top: 40px;
-    width: 13vw;
-  }
 
+  .col-3 {
+    height: 210px;
+    margin-top: 20px;
+    min-width: 100px;
+    max-width: 190px;
+    flex-grow: 1;
+  }
+  
   #process{
     flex-wrap: nowrap;
   }
@@ -101,10 +104,11 @@
     height: 260px;
     min-height: 200px;
   }
-  .col-4{
+  .col-3{
     margin-top: 10px;
     height: 210px;
     width: 22vw;
+    min-width: 22vw;
   }
 
   .textDeco,
@@ -142,7 +146,7 @@
     margin-left: 0 !important;
   }
   .bento{
-    height: 1400px;
+    height: 1600px;
   }
   .bento1 {
     height: 400px;
@@ -155,16 +159,17 @@
     grid-column: span 1;
   }
   .bento4 {
-    height: 400px;
-    min-height: 440px;
+    min-height: 450px;
   }
-  .col-4{
+  .col-3{
     margin-top: 10px;
     height: 180px;
     width: 42vw;
+    min-width: 42vw;
   }
   #process{
     flex-wrap: wrap;
+    width: 100%;
   }
   .header {
     border: none;
@@ -281,7 +286,7 @@
   color: var(--orange);
 }
 
-.col-4{
+.col-3{
   overflow: hidden;
   background-color: var(--dark);
 }
@@ -420,7 +425,7 @@ body.DarkToLight .tag:hover {
 
 body.DarkToLight .cardHole,
 body.DarkToLight .rect,
-body.DarkToLight .col-4 {
+body.DarkToLight .col-3 {
   background-color: var(--light);
 }
 
