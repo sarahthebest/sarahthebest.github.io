@@ -24,7 +24,6 @@
   }
   p {
     font-size: 1.2rem;
-    line-height: 32px;
   }
   #mountain {
     height: 100%;
@@ -58,7 +57,6 @@
   }
   #mountain {
     height: 100%;
-    width: max-content;
   }
   .circle {
     width: 300px;
@@ -239,6 +237,7 @@
 }
 .button{
   font-family: "Archivo Regular", sans-serif;
+  transition:background-color 0.1s linear;
 }
 /* navbar */
 .navbar-nav {
@@ -270,7 +269,6 @@ nav {
   justify-content: right;
 }
 #bootstrap-overrides .link:hover {
-  filter: brightness(120%);
   color: var(--orange);
   text-decoration: underline 1px var(--orange);
 }
@@ -341,7 +339,7 @@ body.DarkToLight .checkbox-label {
   background-color: var(--light);
 }
 body.DarkToLight .spanBorder {
-  border: 1px solid var(--dark);
+  border: 1px solid #1717175d;
 }
 body.DarkToLight .spanBorder:hover {
   border: 1px solid var(--orange);
@@ -433,7 +431,7 @@ body.DarkToLight .navbar-toggler-icon {
 }
 
 /* TEXT STYLES */
-
+h1,
 h2,
 h3,
 h4,
@@ -444,9 +442,19 @@ p {
   font-family: "Archivo Regular";
   cursor: default;
 }
-p {
-  font-family: "Archivo Regular", sans-serif;
-  color: var(--light);
+p{
+  height: fit-content;
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+#bootstrap-overrides h2 {
+  font-size: 2rem;
+}
+#bootstrap-overrides h3,
+#bootstrap-overrides h4 {
+  font-size: 1.8rem;
 }
 .headline {
   font-family: "Archivo Black", sans-serif;
@@ -459,23 +467,11 @@ p {
   font-family: "Rainy Hearts", sans-serif;
   font-size: 1.3rem;
 }
-h1 {
-  font-size: 3rem;
-  color: var(--light);
-  margin-bottom: 20px;
-}
 #bootstrap-overrides .accordion-body {
   color: var(--dark);
   font-family: "Archivo";
 }
 
-#bootstrap-overrides h2 {
-  font-size: 2rem;
-}
-#bootstrap-overrides h3,
-#bootstrap-overrides h4 {
-  font-size: 1.8rem;
-}
 
 .linear {
   animation: grow 10s ease-in-out infinite;
