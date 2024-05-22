@@ -15,10 +15,18 @@ const Header = () => {
     <div className="header w-full h-screen relative overflow-hidden">
       <div id="headerBG" className="fixed m-0 p-0">
         <img
-          src="src\assets\img\headerBG.webp"
+          src="src/assets/img/headerBG.webp"
+          srcSet="
+            src/assets/img/headerBGTablet.webp 768w,
+            src/assets/img/headerBGLaptop.webp 1024w,
+            src/assets/img/headerBG.webp 1920w"
+          sizes="(max-width: 480px) 480px,
+         (max-width: 768px) 768px,
+         (max-width: 1024px) 1024px,
+         1920px"
           alt="background image"
           id="mountain"
-          className="absolute h-screen z-10"
+          className="absolute h-screen w-full object-cover z-10"
         />
         <div className="circle absolute linear z-0"></div>
       </div>
@@ -43,8 +51,10 @@ const Header = () => {
           <div className="wrappertitle flex flex-col gap-2">
             <p className="mt-2 text-4xl">Sarah Emmoth is a</p>
             <div className="scroller cursive dark:border-borderColor border-darkBorder border">
-              <span className="bg-gradient-to-r to-purple from-orange
-               inline-block text-transparent bg-clip-text">
+              <span
+                className="bg-gradient-to-r to-purple from-orange
+               inline-block text-transparent bg-clip-text"
+              >
                 Web developer.
                 <br />
                 UX designer.

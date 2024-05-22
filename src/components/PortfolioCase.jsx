@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "../assets/css/projectStyles.css";
 import BackgroundCard from "./projectPages/BackgroundCard";
 import ProjectHeader from "./projectPages/ProjectHeader";
