@@ -22,12 +22,12 @@ const Header = () => {
         />
         <div className="circle absolute linear z-0"></div>
       </div>
-      <div className="headerBox mx-auto p-0 w-5/6 mt-4">
+      <div className="headerBox mx-auto p-0 w-5/6 mt-10">
         <div className="scroll">
-          <div className="flex mb-2 flex-row">
+          <div className="flex mb-2 flex-row h-min">
             <p style={{ height: "30px" }}>
               Stockholm, Sweden
-              <span className="customBorder spanBorder tag rounded-full mono ml-10">
+              <span className="customBorder spanBorder ms-2 tag rounded-full mono ml-10">
                 {dateTime.toLocaleString("en-GB", {
                   hour: "2-digit",
                   minute: "2-digit",
@@ -35,15 +35,16 @@ const Header = () => {
                 })}
               </span>
             </p>
-            <div className="onlineBar rounded-full relative spanBorder customBorder align-items-center flex flex-row justify-content-between">
+            <div className="onlineBar ms-0 rounded-full relative spanBorder customBorder align-items-center flex flex-row justify-content-between">
               <div className="greenCircle ms-1 rounded-full absolute start-0"></div>
               <p className="m-0 mono">Online</p>
             </div>
           </div>
-          <div className="wrappertitle col ">
-            <p className="mb-2 text-4xl">Sarah Emmoth is a</p>
+          <div className="wrappertitle flex flex-col gap-2">
+            <p className="mt-2 text-4xl">Sarah Emmoth is a</p>
             <div className="scroller cursive dark:border-borderColor border-darkBorder border">
-              <span>
+              <span className="bg-gradient-to-r to-purple from-orange
+               inline-block text-transparent bg-clip-text">
                 Web developer.
                 <br />
                 UX designer.

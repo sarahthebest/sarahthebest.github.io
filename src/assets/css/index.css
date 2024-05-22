@@ -14,17 +14,11 @@
 }
 
 .about-me {
-  display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: repeat(auto-fit);
   justify-content: center;
-  height: 300px;
 }
-.techList{
-  width: 400px;
-  flex-wrap: wrap;
-  height: 200px;
-}
+
 /* beeg screen
 @media screen and (max-width: 10000px) {
     .header {
@@ -220,10 +214,6 @@
     #velocity {
       padding: 0;
     } */
-.container-lg {
-  flex-wrap: wrap;
-  height: fit-content;
-}
 
 .wrappertitle {
   max-width: fit-content;
@@ -260,13 +250,12 @@
 
 .bento2 {
   max-width: 300px;
+  max-height: 300px;
 }
 
 .bento3 {
-  height: 300px;
   max-height: 300px;
   background-image: url(../img/flower.webp);
-  max-width: 400px;
   width: 100%;
   background-size: cover;
   background-position: bottom;
@@ -274,6 +263,9 @@
 
 .bento4 {
   overflow-wrap: normal;
+}
+
+.carousel{
 }
 
 .onlineBar {
@@ -335,8 +327,6 @@ li {
 }
 
 .tag {
-  margin-top: 5px;
-  margin-left: 5px;
   font-family: "Rainy Hearts";
   font-size: 1.5rem;
 }
@@ -349,16 +339,9 @@ li {
   width: 50px;
 }
 
-.socLogo {
-  width: 40px;
-}
-
 .tech {
   width: 80px;
   height: 80px;
-  margin-left: 5px;
-  margin-top: 5px;
-  background-color: var(--light);
   font-size: 1.25rem;
   display: inline-block;
 }
@@ -383,14 +366,8 @@ li {
 }
 
 .button {
-  background-color: var(--dark);
-  color: var(--light);
   font-size: 1rem;
   text-decoration: none;
-}
-
-.button:hover {
-  color: var(--light);
 }
 
 .proj {
@@ -430,21 +407,6 @@ body.DarkToLight .cardHole,
 body.DarkToLight .rect,
 body.DarkToLight .col-3 {
   background-color: var(--light);
-}
-
-body.DarkToLight .textDeco,
-body.DarkToLight .textDecoLeft,
-body.DarkToLight .arrow {
-  filter: invert(0);
-}
-
-body.DarkToLight .button {
-  background-color: var(--light);
-  color: var(--dark);
-}
-
-#bootstrap-overrides body.DarkToLight .button:hover {
-  color: var(--dark);
 }
 
 body.DarkToLight .scroller {

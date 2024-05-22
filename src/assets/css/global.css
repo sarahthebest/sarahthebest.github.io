@@ -16,6 +16,10 @@
   font-family: "Archivo Semibold";
   src: url("../fonts/Archivo-SemiBold.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Decorative";
+  src: url("../fonts/ArsenicaTrial-Italic.woff2") format("woff2");
+}
 
 /* my colors */
 :root {
@@ -23,7 +27,7 @@
   --light: #f2f0f3;
   --orange: #ff6040;
   --bg: #1e1222;
-  --purple: #942bd6;
+  --purple: #9141e7;
 }
 
 /* big screen  */
@@ -95,10 +99,6 @@
   }
 }
 
-body {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-}
 .container-lg {
   max-width: 1140px;
 }
@@ -124,54 +124,6 @@ body {
   margin-right: 600px;
 }
 
-@keyframes animateGrain {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(-5%, -10%);
-  }
-  20% {
-    transform: translate(-15%, -20%);
-  }
-  30% {
-    transform: translate(-5%, -10%);
-  }
-  40% {
-    transform: translate(-15%, -20%);
-  }
-
-  50% {
-    transform: translate(-5%, -10%);
-  }
-  60% {
-    transform: translate(-15%, -20%);
-  }
-  70% {
-    transform: translate(-5%, -10%);
-  }
-  80% {
-    transform: translate(-15%, -20%);
-  }
-  90% {
-    transform: translate(-5%, -10%);
-  }
-  100% {
-    transform: translate(-15%, -20%);
-  }
-}
-/* my colors */
-/* :root {
-  --dark: #101010;
-  --light: #f2f0f3;
-  --orange: #ff6040;
-  --bg: #1e1222;
-  --purple: #942bd6;
-}
-.darkBg {
-  background-color: var(--bg);
-} */
 .spanBorder {
   border: #1717175d 1px solid;
   padding: 5px;
@@ -257,13 +209,13 @@ body {
 /* navbar */
 .navbar-links {
   width: fit-content;
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(10px);
+
 }
 nav {
   z-index: 999;
 }
 .link {
-  text-decoration: none;
   font-family: "Archivo Regular", sans-serif;
   font-size: 1.2rem;
   display: block;
@@ -275,17 +227,15 @@ nav {
   font-size: 1.5rem;
   width: 60px;
 }
-.logoBg {
-  background-color: var(--bg);
-}
+
 .nav-item {
   width: fit-content;
   margin-top: auto;
   margin-bottom: auto;
 }
-.link:hover {
-  color: var(--orange);
-  text-decoration: underline 1px var(--orange);
+
+.mobile-links{
+  height: fit-content;
 }
 /* footer */
 
@@ -343,11 +293,6 @@ body.darkMode .customBG {
   background-color: rgba(255, 255, 255, 0.669);
 }
 
-body.darkMode .checkbox-label {
-  outline: var(--light) 2px solid;
-  transition: 0s !important;
-  background-color: var(--light);
-}
 
 body.darkMode .link:hover {
   color: var(--orange);
@@ -357,14 +302,6 @@ body.darkMode #half-circle {
   background-color: var(--dark);
   transition: 0s !important;
 }
-}
-body.darkMode .navbar-toggler-icon {
-  filter: invert(0);
-}
-body.darkMode .navbar-links{
-    background-color: var(--bg);
-
-} */
 
 /* animations */
 
@@ -431,6 +368,45 @@ body.darkMode .navbar-links{
   transform: scale(1.1);
 }
 
+@keyframes animateGrain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, -20%);
+  }
+  30% {
+    transform: translate(-5%, -10%);
+  }
+  40% {
+    transform: translate(-15%, -20%);
+  }
+
+  50% {
+    transform: translate(-5%, -10%);
+  }
+  60% {
+    transform: translate(-15%, -20%);
+  }
+  70% {
+    transform: translate(-5%, -10%);
+  }
+  80% {
+    transform: translate(-15%, -20%);
+  }
+  90% {
+    transform: translate(-5%, -10%);
+  }
+  100% {
+    transform: translate(-15%, -20%);
+  }
+}
+
+
 /* TEXT STYLES */
 h1,
 h2,
@@ -450,18 +426,17 @@ h1 {
   margin-bottom: 20px;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 h3,
 h4 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .headline {
   font-family: "Archivo Black", sans-serif;
 }
 .cursive {
-  font-family: "Libre Baskerville", serif;
-  font-style: italic;
+  font-family: "Decorative";
 }
 .mono {
   font-family: "Rainy Hearts", sans-serif;

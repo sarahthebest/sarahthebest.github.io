@@ -1,0 +1,70 @@
+import projectData from "../../assets/json/projects.json";
+
+const Cases = () => {
+  let projects = projectData.projects;
+
+  return (
+    <>
+      <section
+        id="projects"
+        className="position-relative mt-14 bg-customBGDark dark:bg-customBG rounded projects
+        customBorder overflow-hidden container-lg mx-auto p-0 flex-column d-flex"
+      >
+        <div className="projects text-center my-5">
+          <h3 className="mb-3">What i've been up to</h3>
+          <img
+            className="dark:invert invert-0 img-fluid hvr-float"
+            src="src\assets\img\Arrow.webp"
+            alt="arrow pointing down."
+          />
+        </div>
+        {projects.map((project, index) => (
+          <a key={index} className="linkUnstyled" href={project.link}>
+            <div
+              className="case m-0 p-0 dark:border-borderColor border-darkBorder 
+       border border-l-0 border-r-0 border-b-0"
+            >
+              <div
+                className="align-items-center overflow-y-scroll"
+                style={{ height: "300px" }}
+              >
+                <img
+                  className="w-full"
+                  src={project.thumbnail}
+                  alt="Velocity project image."
+                />
+              </div>
+              <div className="flex2 p-0 align-items-center text-center">
+                <div className="proj p-3 d-flex gap-2 flex-column align-items-center h-96">
+                  <h2 className="cursive">{project.title}</h2>
+                  <p>{project.description}</p>
+                  <p>
+                    {project.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="spanBorder ms-1 rounded-full p-2 tag"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))}
+        <div
+          className="case 
+          rounded-bottom col-12 m-0 p-0 position-relative align-items-center
+          dark:border-borderColor border-darkBorder 
+          border border-l-0 border-r-0 border-b-0"
+          style={{ height: "180px" }}
+        >
+          <p>Stay tuned for more...</p>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Cases;
