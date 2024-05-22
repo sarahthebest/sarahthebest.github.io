@@ -33,7 +33,7 @@ const Bento = () => {
         <div className="bento3 col-span-2 rounded overflow-hidden"></div>
         <div className="bento4 col-span-4 sm:col-span-2 rounded overflow-hidden">
           <div className="h-full text-start">
-            <h3>GitHub highlights:</h3>
+            <h3 className="mono">GitHub highlights:</h3>
             <Carousel className="carousel mx-auto relative">
               {ghProj.map((item, index) => (
                 <div key={index} className="flex flex-row gap-4 items-center justify-center h-full">

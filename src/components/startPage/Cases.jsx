@@ -31,7 +31,7 @@ const Cases = () => {
                 <img
                   className="w-full"
                   src={project.thumbnail}
-                  alt="Velocity project image."
+                  alt={project.imgAlt}
                 />
               </div>
               <div className="flex2 p-0 align-items-center text-center">

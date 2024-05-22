@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import Home from "../Home";
 
 const Nav = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -15,10 +14,8 @@ const Nav = () => {
   const navItems = [
     { text: "Home", link: "/" },
     { text: "Github", link: "https://github.com/sarahthebest" },
-    { text: "Projects", link: "#projects" },
     { text: "About Me", link: "/about" },
     {
-      id: 5,
       text: "Linkedin",
       link: "https://www.linkedin.com/in/sarah-emmoth-696131206/",
     },

@@ -6,7 +6,7 @@ export default {
   darkMode: "selector",
   content: [
     "./src/components/**/*.{js,jsx,html}",
-    "./src/assets/fonts/*.{woff2}",
+    "./src/assets/fonts/*.woff2",
     "./src/*.{js,jsx,html}",
     "./index.html",
     flowbite.content(),
@@ -15,7 +15,7 @@ export default {
     extend: {
       colors: {
         dark: "#101010",
-        light: "#f2f0f3",
+        light: "#fbfbfb",
         orange: "#ff6040",
         bg: "#1e1222",
         purple: "#9141e7",

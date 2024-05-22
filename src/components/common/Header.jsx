@@ -27,7 +27,7 @@ const Header = () => {
           <div className="flex mb-2 flex-row h-min">
             <p style={{ height: "30px" }}>
               Stockholm, Sweden
-              <span className="customBorder spanBorder ms-2 tag rounded-full mono ml-10">
+              <span className="customBorder spanBorder ms-2 px-2 py-1 tag rounded-full mono ml-10">
                 {dateTime.toLocaleString("en-GB", {
                   hour: "2-digit",
                   minute: "2-digit",

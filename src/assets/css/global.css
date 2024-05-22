@@ -24,7 +24,7 @@
 /* my colors */
 :root {
   --dark: #101010;
-  --light: #f2f0f3;
+  --light: #fbfbfb;
   --orange: #ff6040;
   --bg: #1e1222;
   --purple: #9141e7;
@@ -126,7 +126,6 @@
 
 .spanBorder {
   border: #1717175d 1px solid;
-  padding: 5px;
 }
 .spanBorder:hover {
   border: 1px solid var(--orange);
@@ -274,9 +273,9 @@ body.darkMode .circle2,
 body.darkMode .circle3 {
   background: radial-gradient(
     circle,
-    rgba(167, 14, 151, 0.538) 20%,
-    rgba(238, 184, 83, 0.455) 50%,
-    rgba(255, 236, 88, 0.647) 61%
+    rgba(254, 101, 46, 0.866) 20%,
+    rgba(228, 23, 255, 0.532) 50%,
+    rgba(25, 0, 150, 0.773) 61%
   );
 }
 body.darkMode .customBorder {
