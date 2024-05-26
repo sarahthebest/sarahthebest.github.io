@@ -36,9 +36,9 @@ const Bento = () => {
             <h3 className="mono">GitHub highlights:</h3>
             <Carousel className="carousel mx-auto relative">
               {ghProj.map((item, index) => (
-                <div key={index} className="flex flex-row gap-4 items-center justify-center h-full">
-                  <img src={item.img} className="h-full w-full rounded" alt="" />
-                  <p className="w-1/2">{item.desc}</p>
+                <div key={index} className="flex flex-row gap-4 justify-center h-full">
+                  <img src={item.img} className="h-full rounded w-2/3" alt="" />
+                  <p>{item.desc}</p>
                 </div>
               ))}
             </Carousel>

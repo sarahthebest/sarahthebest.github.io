@@ -2,16 +2,14 @@ import "../assets/css/projectStyles.css";
 import BackgroundCard from "./projectPages/BackgroundCard";
 import ProjectHeader from "./projectPages/ProjectHeader";
 import projectData from "../assets/json/projects.json";
+import ProjectBG from "./projectPages/ProjectBG";
 
 const Velocity = () => {
   let project = projectData.projects.find((proj) => proj.title === "Velocity");
 
   return (
     <>
-      <div className="m-0 p-0 fixed" id="headerBG">
-        <div className="circle2 -ml-96 absolute linear start-0 top-0"></div>
-        <div className="circle3 -mr-96 absolute end-0 top-0 linear"></div>
-      </div>
+      <ProjectBG />
       <ProjectHeader project={project} />
       <BackgroundCard project={project} />
       <div

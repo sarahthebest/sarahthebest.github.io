@@ -51,7 +51,7 @@ const Toolbox = () => {
           data-aos-delay="10"
           className="right-box mx-auto"
         >
-          <ul className="flex-row flex flex-wrap place-content-center px-10">
+          <ul className="flex-row flex flex-wrap place-content-center sm:px-10">
             {ux.map((item, index) => (
               <li key={index} className="tag spanBorder m-1 rounded p-2">
                 {item.text}

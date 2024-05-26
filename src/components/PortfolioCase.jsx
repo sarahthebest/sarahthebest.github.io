@@ -3,6 +3,8 @@ import "../assets/css/projectStyles.css";
 import BackgroundCard from "./projectPages/BackgroundCard";
 import ProjectHeader from "./projectPages/ProjectHeader";
 import projectData from "../assets/json/projects.json";
+import { Accordion } from "flowbite-react";
+import ProjectBG from "./projectPages/ProjectBG";
 
 const PortfolioCase = () => {
   let project = projectData.projects.find(
@@ -11,10 +13,7 @@ const PortfolioCase = () => {
 
   return (
     <>
-      <div className="m-0 p-0 fixed" id="headerBG">
-        <div className="circle2 -ml-96 absolute linear start-0 top-0"></div>
-        <div className="circle3 -mr-96 absolute end-0 top-0 linear"></div>
-      </div>
+      <ProjectBG />
       <ProjectHeader project={project} />
       <BackgroundCard project={project} />
       <div
@@ -106,6 +105,34 @@ const PortfolioCase = () => {
               <h2 className="headline">Phase 4</h2>
               <h2 className="ms-4 cursive">.Setbacks</h2>
             </div>
+            <Accordion>
+              <Accordion.Panel>
+                <Accordion.Title>Using GitHub</Accordion.Title>
+                <Accordion.Content>
+                  <p className="mb-2">
+                    I decided to use GitHub to host and manage my portfolio. I had very little experience with GitHub prior to enrolling in my program but i caught on fairly quick. I also discovered GitHub Pages and decided to host my portfolio there.
+                  </p>
+                </Accordion.Content>
+              </Accordion.Panel>
+              <Accordion.Panel>
+                <Accordion.Title>Using Bootstrap</Accordion.Title>
+                <Accordion.Content>
+                  <p>
+                    I made the executive decision to use Bootstrap 5 for this project. It made the issue of responsiveness much easier to tackle and lessened the amount of CSS lines needed to execute my vision.
+                    Bootstrap came with its own issues though that i wasn't entirely equipped to solve on my own which made me rely on google and chat-gpt a lot. One issue was the Bootstrap default styles. Eg. wanting to override a bs default background-color was a bit tricky for me but i solved it by adding a id tag to body so it made my selectors more specific.
+                  </p>
+                </Accordion.Content>
+              </Accordion.Panel>
+              <Accordion.Panel>
+                <Accordion.Title>Website performance</Accordion.Title>
+                <Accordion.Content>
+                  <p className="mb-2">
+                    Later in development i decided to analyze how my website performed in terms of speed, accessibility and best practices using PageSpeed. I discovered that the header image i used was VERY slow to load in fact none of my images were optimized or responsive and THAT was a problem.
+                    I decided to convert all of my images into next-gen format webp,I reviewed all the recommendations from PageSpeed and made the necessary adjustments accordingly.
+                  </p>
+                </Accordion.Content>
+              </Accordion.Panel>
+            </Accordion>
             <h3>ChatGPT - My...saviour?</h3>
             <p>
               Despite these challenges, each setback taught me something new and

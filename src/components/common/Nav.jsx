@@ -42,7 +42,8 @@ const Nav = () => {
 
   return (
     <nav className="navbar sticky top-3 rounded-full">
-      <div className="h-15 pe-4 rounded-full navbar-links customBorder bg-bg/60 dark:bg-light/60 text-center mx-auto flex flex-row justify-between">
+      <div className="h-15 pe-4 rounded-full navbar-links backdrop-blur-md
+      customBorder bg-bg/60 dark:bg-light/60 text-center mx-auto flex flex-row justify-between">
         <Link
           className="navbar-brand ms-0 ps-0 flex items-center justify-center"
           onClick={(e) => e.preventDefault()}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import BG from "./Bg";
 
 const Header = () => {
   const [dateTime, setDateTime] = useState(new Date());
@@ -13,25 +14,9 @@ const Header = () => {
 
   return (
     <div className="header w-full h-screen relative overflow-hidden">
-      <div id="headerBG" className="fixed m-0 p-0">
-        <img
-          src="src/assets/img/headerBG.webp"
-          srcSet="
-            src/assets/img/headerBGTablet.webp 768w,
-            src/assets/img/headerBGLaptop.webp 1024w,
-            src/assets/img/headerBG.webp 1920w"
-          sizes="(max-width: 480px) 480px,
-         (max-width: 768px) 768px,
-         (max-width: 1024px) 1024px,
-         1920px"
-          alt="background image"
-          id="mountain"
-          className="absolute h-screen w-full object-cover z-10"
-        />
-        <div className="circle absolute linear z-0"></div>
-      </div>
-      <div className="headerBox mx-auto p-0 w-5/6 mt-10">
-        <div className="scroll">
+      <BG />
+      <div className="headerBox flex flex-col mx-auto p-0 mt-10 items-center sm:items-start sm:w-5/6">
+        <div className="scroll flex flex-col items-center sm:items-start">
           <div className="flex mb-2 flex-row h-min">
             <p style={{ height: "30px" }}>
               Stockholm, Sweden
@@ -66,7 +51,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="rect bg-light dark:bg-bg flex align-items-center justify-content-center customBorder relative overflow-hidden mt-4">
+        <div className="rect bg-light dark:bg-bg flex align-items-center justify-center customBorder relative overflow-hidden mt-4">
           <p
             style={{ filter: "blur(2px)" }}
             className="position-absolute text-center text-base leading-5"
