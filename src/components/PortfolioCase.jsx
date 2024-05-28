@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import "../assets/css/projectStyles.css";
 import BackgroundCard from "./projectPages/BackgroundCard";
 import ProjectHeader from "./projectPages/ProjectHeader";
 import projectData from "../assets/json/projects.json";
 import { Accordion } from "flowbite-react";
 import ProjectBG from "./projectPages/ProjectBG";
+import FadeIn from "./common/FadeIn";
 
 const PortfolioCase = () => {
   let project = projectData.projects.find(
@@ -17,10 +17,10 @@ const PortfolioCase = () => {
       <ProjectHeader project={project} />
       <BackgroundCard project={project} />
       <div
-        className="grid-container overflow-hidden customBorder text-wrap px-4 bg-customBGDark dark:bg-customBG
-       mt-4 rounded container-lg auto-rows-auto grid-cols-1 grid mx-auto rounded-bottom"
+        className="grid-container text-wrap gap-y-20 
+       mt-10 rounded container-lg auto-rows-auto grid-cols-1 grid mx-auto rounded-bottom"
       >
-        <div id="grid-item2" className="p-4 mx-auto flex flex-row">
+        <FadeIn selector="grid-item1 mx-auto flex flex-row fade-in-section">
           <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 1</h2>
@@ -47,8 +47,9 @@ const PortfolioCase = () => {
               wanted to add more dynamic content and subtle animations.
             </p>
           </div>
-        </div>
-        <div id="grid-item3" className="p-4 mx-auto flex flex-row">
+        </FadeIn>
+
+        <FadeIn selector="grid-item2 mx-auto flex flex-row fade-in-section">
           <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 2</h2>
@@ -74,8 +75,8 @@ const PortfolioCase = () => {
               like dynamic content and subtle animations.
             </p>
           </div>
-        </div>
-        <div id="grid-item3" className="p-4 mx-auto flex flex-row">
+        </FadeIn>
+        <FadeIn selector="grid-item3 mx-auto flex flex-row fade-in-section">
           <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 3</h2>
@@ -98,16 +99,16 @@ const PortfolioCase = () => {
               that properly showcased who I am.
             </p>
           </div>
-        </div>
-        <div id="grid-item3" className="p-4 mx-auto flex flex-row">
+        </FadeIn>
+        <FadeIn selector="grid-item4 mx-auto flex flex-row fade-in-section">
           <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 4</h2>
               <h2 className="ms-4 cursive">.Setbacks</h2>
             </div>
-            <Accordion>
+            <Accordion className="bg-light dark:bg-dark text-base">
               <Accordion.Panel>
-                <Accordion.Title>Using GitHub</Accordion.Title>
+                <Accordion.Title className="text-xs">Using GitHub</Accordion.Title>
                 <Accordion.Content>
                   <p className="mb-2">
                     I decided to use GitHub to host and manage my portfolio. I had very little experience with GitHub prior to enrolling in my program but i caught on fairly quick. I also discovered GitHub Pages and decided to host my portfolio there.
@@ -115,7 +116,7 @@ const PortfolioCase = () => {
                 </Accordion.Content>
               </Accordion.Panel>
               <Accordion.Panel>
-                <Accordion.Title>Using Bootstrap</Accordion.Title>
+                <Accordion.Title className="text-xs">Using Bootstrap</Accordion.Title>
                 <Accordion.Content>
                   <p>
                     I made the executive decision to use Bootstrap 5 for this project. It made the issue of responsiveness much easier to tackle and lessened the amount of CSS lines needed to execute my vision.
@@ -124,7 +125,7 @@ const PortfolioCase = () => {
                 </Accordion.Content>
               </Accordion.Panel>
               <Accordion.Panel>
-                <Accordion.Title>Website performance</Accordion.Title>
+                <Accordion.Title className="text-xs">Website performance</Accordion.Title>
                 <Accordion.Content>
                   <p className="mb-2">
                     Later in development i decided to analyze how my website performed in terms of speed, accessibility and best practices using PageSpeed. I discovered that the header image i used was VERY slow to load in fact none of my images were optimized or responsive and THAT was a problem.
@@ -148,8 +149,8 @@ const PortfolioCase = () => {
               alt="Graphic of me asking chat gpt for help in my darkest hours and moments..."
             />
           </div>
-        </div>
-        <div id="grid-item4" className="p-4 pb-10 mx-auto flex flex-row">
+        </FadeIn>
+        <FadeIn selector="grid-item5 mx-auto flex flex-row fade-in-section">
           <div className="text-center gap-3 flex flex-col">
             <h2 className="headline">Completion</h2>
             <p>
@@ -173,7 +174,7 @@ const PortfolioCase = () => {
               the foreseeable future so stay tuned for more projects 😉
             </p>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </>
   );

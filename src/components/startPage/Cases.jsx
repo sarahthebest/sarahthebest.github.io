@@ -1,4 +1,5 @@
 import projectData from "../../assets/json/projects.json";
+import FadeIn from "../common/FadeIn";
 
 const Cases = () => {
   let projects = projectData.projects;
@@ -20,9 +21,8 @@ const Cases = () => {
         </div>
         {projects.map((project, index) => (
           <a key={index} className="linkUnstyled" href={project.link}>
-            <div
-              className="case m-0 p-0 dark:border-borderColor border-darkBorder 
-       border border-l-0 border-r-0 border-b-0"
+            <FadeIn selector="case m-0 p-0 dark:border-borderColor border-darkBorder 
+       border border-l-0 border-r-0 border-b-0 fade-in-section"
             >
               <div
                 className="align-items-center overflow-y-scroll"
@@ -50,18 +50,14 @@ const Cases = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </FadeIn>
           </a>
         ))}
-        <div
-          className="case 
-          rounded-bottom col-12 m-0 p-0 position-relative align-items-center
-          dark:border-borderColor border-darkBorder 
-          border border-l-0 border-r-0 border-b-0"
-          style={{ height: "180px" }}
+        <FadeIn selector="rounded-bottom col-12 m-0 p-0 position-relative align-items-center teaser
+          dark:border-borderColor border-darkBorder border border-l-0 border-r-0 border-b-0 fade-in-section"
         >
           <p>Stay tuned for more...</p>
-        </div>
+        </FadeIn>
       </section>
     </>
   );

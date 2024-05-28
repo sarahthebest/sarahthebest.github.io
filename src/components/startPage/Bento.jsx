@@ -5,14 +5,18 @@ const Bento = () => {
     {
       img: "src/assets/img/thumbnails/Auctioneer.webp",
       desc: "Live auction website built in React using finished API. Group Project.",
-      link: "",
+      link: "https://github.com/sarahthebest/auctioneer",
     },
     {
       img: "src/assets/img/thumbnails/recipeFetcher.webp",
       desc: "Recipe website where users can search and find recipes. School project.",
-      link: "",
+      link: "https://github.com/sarahthebest/Recipefetcher",
     },
-    { img: "src/assets/img/thumbnails/webshop.webp", desc: "Webshop built in React with FakeStoreAPI", link: "" },
+    {
+      img: "src/assets/img/thumbnails/webshop.webp",
+      desc: "Webshop built in React with FakeStoreAPI",
+      link: ""
+    },
   ];
 
   return (
@@ -28,17 +32,18 @@ const Bento = () => {
           </a>
         </div>
         <div className="bento2 col-span-2 sm:col-span-1 rounded overflow-hidden">
-        <img className="selfie w-full h-full" src="src/assets/img/selfie2.webp" alt="Image of a woman with shoulder-length dark brown hair and glasses giving a thumbs up." />
+          <img className="selfie w-full h-full" src="src/assets/img/selfie2.webp" alt="Image of a woman with shoulder-length dark brown hair and glasses giving a thumbs up." />
         </div>
         <div className="bento3 col-span-2 rounded overflow-hidden"></div>
         <div className="bento4 col-span-4 sm:col-span-2 rounded overflow-hidden">
           <div className="h-full text-start">
             <h3 className="mono">GitHub highlights:</h3>
-            <Carousel className="carousel mx-auto relative">
-              {ghProj.map((item, index) => (
-                <div key={index} className="flex flex-row gap-4 justify-center h-full">
-                  <img src={item.img} className="h-full rounded w-2/3" alt="" />
-                  <p>{item.desc}</p>
+            <Carousel className="carousel mx-auto relative bg-grey-900 rounded overflow-hidden">
+              {ghProj.map((project, index) => (
+                <div key={index} className="flex flex-col h-full relative">
+                  <a href={project.link} target="_blank">
+                    <img src={project.img} className="w-full object-fill mx-auto" alt={project.desc} />
+                  </a>
                 </div>
               ))}
             </Carousel>

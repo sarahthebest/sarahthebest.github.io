@@ -1,3 +1,5 @@
+import FadeIn from "../common/FadeIn";
+
 const Toolbox = () => {
   const ux = [
     { text: "Adobe Illustrator" },
@@ -29,8 +31,7 @@ const Toolbox = () => {
     className="text-center relative bg-customBGDark dark:bg-customBG customBorder
      rounded container-lg mx-auto p-0 flex-col flex">
       <h3 className="w-full my-4">My toolbox</h3>
-      <div
-        className="about-me w-full dark:border-borderColor border-darkBorder 
+      <FadeIn selector="about-me w-full dark:border-borderColor border-darkBorder fade-in-section
       border border-l-0 border-r-0 flex flex-col sm:grid p-10"
       >
         <div
@@ -59,8 +60,8 @@ const Toolbox = () => {
             ))}
           </ul>
         </div>
-      </div>
-      <div className="about-me h-full w-full flex flex-col sm:grid p-10">
+      </FadeIn>
+      <FadeIn selector="about-me h-full w-full flex flex-col sm:grid p-10 fade-in-section">
         <div
           className="align-items-center skill relative"
           style={{ minHeight: "200px" }}
@@ -94,7 +95,7 @@ const Toolbox = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </FadeIn>
     </article>
   );
 };

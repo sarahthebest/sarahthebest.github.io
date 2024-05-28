@@ -19,202 +19,6 @@
   justify-content: center;
 }
 
-/* beeg screen
-@media screen and (max-width: 10000px) {
-    .header {
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-    }
-  
-    .headerBox {
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-      margin-left: 0;
-      margin-top: 3vh;
-    }
-  
-    .bento1 {
-      padding: 20px;
-      grid-column: span 2;
-    }
-  
-    .bento2 {
-      grid-column: span 1;
-      max-height: 350px;
-    }
-  
-    .bento4 {
-      grid-column: span 2;
-      width: 100%;
-      min-height: 200px;
-    }
-  
-    .col-3 {
-      height: 210px;
-      margin-top: 20px;
-      min-width: 100px;
-      max-width: 190px;
-      flex-grow: 1;
-    }
-    
-    #process{
-      flex-wrap: nowrap;
-    }
-  
-    .container-lg {
-      position: relative;
-    }
-  
-    #bootstrap-overrides h4 {
-      margin-top: 0;
-    }
-  }
-  
-  /* medium */
-/* @media screen and (max-width: 1000px) {
-    .content-to-hide {
-      display: none;
-    }
-  
-    #bootstrap-overrides .headerBox {
-      grid-template-areas: "scroll" "greeting";
-      margin-left: 3vw !important;
-    }
-  
-    #bootstrap-overrides h2 {
-      margin-top: none;
-    }
-  
-    .bento {
-      grid-template-columns: auto;
-      grid-auto-flow: row;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      height: 1000px;
-    }
-  
-    .bento2 {
-      grid-column: span 1;
-      max-height: 300px;
-    }
-  
-    .bento1 {
-      grid-column: span 3;
-      padding: 20px;
-      height: 400px;
-      min-height: 470px;
-    }
-  
-    .bento3 {
-      grid-column: span 2;
-    }
-  
-    .bento4 {
-      grid-column: span 3;
-      max-height: 350px;
-      height: 260px;
-      min-height: 200px;
-    }
-    .col-3{
-      margin-top: 10px;
-      height: 210px;
-      width: 22vw;
-      min-width: 22vw;
-    }
-  
-    .textDeco,
-    .textDecoLeft {
-      margin-top: none;
-    }
-  
-    #bg {
-      height: 100%;
-    }
-  } */
-
-/*  small screen */
-/* @media screen and (max-width: 600px) {
-    #bootstrap-overrides .container-lg {
-      width: 100%;
-    }
-  
-    #bootstrap-overrides .container {
-      width: 100%;
-    }
-  
-    .about-me {
-      min-height: 400px;
-      height: fit-content;
-      grid-template-columns: 100%;
-      grid-template-rows: repeat(auto-fit);
-    }
-  
-    .card {
-      width: fit-content;
-    }
-  
-    #bootstrap-overrides .headerBox {
-      margin-left: 0 !important;
-    }
-    .bento{
-      height: 1600px;
-    }
-    .bento1 {
-      height: 400px;
-    }
-  
-    .bento2 {
-      grid-column: span 2;
-    }
-    .bento3 {
-      grid-column: span 1;
-    }
-    .bento4 {
-      min-height: 450px;
-    }
-    .col-3{
-      margin-top: 10px;
-      height: 180px;
-      width: 42vw;
-      min-width: 42vw;
-    }
-    #process{
-      flex-wrap: wrap;
-      width: 100%;
-    }
-    .header {
-      border: none;
-    }
-  
-    .rect {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    .scroll {
-      margin-left: auto;margin-right: auto;
-      max-width: 500px;
-      min-width: 370;
-      grid-area: scroll;
-    }
-  
-    .skill {
-      margin-top: 0;
-    }
-  
-    #customBG section {
-      border-left: none;
-      border-right: none;
-      background-color: rgba(245, 245, 245, 0.389);
-      backdrop-filter: blur(5px);
-    }
-  
-    #velocity {
-      padding: 0;
-    } */
-
 .wrappertitle {
   max-width: fit-content;
   top: 20vh;
@@ -249,7 +53,6 @@
 }
 
 .bento2 {
-  max-width: 300px;
   max-height: 300px;
 }
 
@@ -263,9 +66,7 @@
 
 .bento4 {
   overflow-wrap: normal;
-}
-
-.carousel{
+  max-height: 300px;
 }
 
 .onlineBar {
@@ -379,35 +180,9 @@ section {
   margin-bottom: 60px;
 }
 
-/* Darkmode */
-
-
-
-/* body.DarkToLight .case {
-  border-top: 1px solid var(--dark);
-  border-bottom: 1px solid var(--dark);
+.teaser{
+  height: 180px;
 }
-body.DarkToLight .scroller > span {
-  color: var(--dark);
-}
-
-body.LightToDark .onlineBar:hover > p {
-  color: var(--orange);
-}
-body.LightToDark .onlineBar > p {
-  color: var(--dark);
-}
-
-body.DarkToLight .cardHole,
-body.DarkToLight .rect,
-body.DarkToLight .col-3 {
-  background-color: var(--light);
-}
-
-body.DarkToLight .scroller {
-  border-left: 0;
-  border-right: 0;
-} */
 
 /* Scroller styling */
 .scroller {
@@ -415,7 +190,7 @@ body.DarkToLight .scroller {
   line-height: 4rem;
   position: relative;
   overflow: hidden;
-  width: 350px;
+  /* width: 350px; */
   border-left: 0 !important;
   border-right: 0 !important;
 }

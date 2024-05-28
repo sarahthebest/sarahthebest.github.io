@@ -42,9 +42,7 @@
     height: 100%;
     width: 100%;
   }
-  .circle,
-  .circle2,
-  .circle3 {
+  .circle{
     width: 50vw;
     height: 80vh;
     top: 20vh;
@@ -58,15 +56,26 @@
       rgba(255, 32, 58, 0.72) 61%
     );
   }
+    .circle2,
+    .circle3 {
+      width: 50vw;
+      height: 100vh;
+      border-radius: 50%;
+      filter: blur(20px);
+      opacity: 20%;
+      background: radial-gradient(
+        circle,
+        rgb(248, 223, 152) 40%,
+        rgb(255, 85, 0) 50%,
+        rgba(255, 32, 58, 0.72) 61%
+      );
+  }
   .circle {
     margin-left: 25vw;
   }
 }
 /* medium screen*/
 @media screen and (max-width: 1000px) {
-  .content-to-hide {
-    display: none;
-  }
   #mountain {
     height: 100%;
   }
@@ -82,12 +91,6 @@
 @media screen and (max-width: 600px) {
   .container-lg {
     width: 100%;
-  }
-  .container {
-    width: 100%;
-  }
-  .card {
-    width: fit-content;
   }
   .container-lg * :hover {
     pointer-events: none !important;
@@ -170,21 +173,7 @@
 .checkbox:checked + .checkbox-label #half-circle {
   transform: translateX(12.5px) rotateY(180deg);
 }
-/* sets transition for all  */
-*:not(body) {
-  transition: all 0.1s linear;
-}
 
-/* top button */
-#topBtn {
-  width: 60px;
-  display: none;
-  background-color: var(--light);
-  border: 0px;
-  z-index: 10;
-  height: 50px;
-  border-radius: 50px 0px 0px 0px;
-}
 #bootstrap-overrides .body {
   margin: 0;
   overflow-y: scroll;
@@ -208,8 +197,6 @@
 /* navbar */
 .navbar-links {
   width: fit-content;
-  backdrop-filter: blur(10px);
-
 }
 nav {
   z-index: 999;
@@ -257,6 +244,12 @@ footer {
   text-decoration: underline 1px var(--dark);
 }
 
+/* About page */
+
+.media{
+  height: 300px;
+}
+
 /* darkmode */
 
 body.darkMode .spanBorder {
@@ -280,26 +273,6 @@ body.darkMode .circle3 {
 }
 body.darkMode .customBorder {
   border: rgba(255, 255, 255, 0.389) 1px solid;
-}
-/* 
-
-/*
-
-body.darkMode .link {
-    color: var(--light);
-}
-body.darkMode .customBG {
-  background-color: rgba(255, 255, 255, 0.669);
-}
-
-
-body.darkMode .link:hover {
-  color: var(--orange);
-}
-
-body.darkMode #half-circle {
-  background-color: var(--dark);
-  transition: 0s !important;
 }
 
 /* animations */
@@ -404,51 +377,6 @@ body.darkMode #half-circle {
     transform: translate(-15%, -20%);
   }
 }
-
-
-/* TEXT STYLES */
-h1,
-h2,
-h3,
-h4,
-blockquote,
-li,
-p {
-  font-family: "Archivo Regular";
-  cursor: default;
-}
-p {
-  height: fit-content;
-}
-h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-h2 {
-  font-size: 2.5rem;
-  font-family: "Archivo Semibold";
-}
-h3,
-h4 {
-  font-size: 2rem;
-}
-.headline {
-  font-family: "Archivo Black", sans-serif;
-}
-.cursive {
-  font-family: "Decorative";
-}
-.mono {
-  font-family: "Rainy Hearts", sans-serif;
-  font-size: 1.3rem;
-}
-.accordion-body {
-  font-family: "Archivo";
-}
-
-.linear {
-  animation: grow 10s ease-in-out infinite;
-}
 @keyframes grow {
   0% {
     transform: scale(1);
@@ -459,4 +387,55 @@ h4 {
   100% {
     transform: scale(1);
   }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateX(-5vh);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  transform: none;
+  opacity: 1;
+}
+
+/* TEXT STYLES */
+h1,
+h2,
+h3,
+h4,
+blockquote,
+li,
+p {
+  font-family: "Archivo Regular";
+  font-size: 1.1em;
+}
+h1 {
+  font-size: 2.6em;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 1.8em;
+  font-family: "Archivo";
+}
+h3,
+h4 {
+  font-size: 1.4em;
+}
+.headline {
+  font-family: "Archivo Semibold", sans-serif;
+  font-size: 2em;
+}
+.cursive {
+  font-family: "Decorative";
+}
+.mono {
+  font-family: "Rainy Hearts", sans-serif;
+  font-size: 1.3rem;
+}
+
+.linear {
+  animation: grow 10s ease-in-out infinite;
 }

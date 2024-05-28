@@ -5,7 +5,7 @@ const BackgroundCard = ({ project }) => {
   return (
     <div
       className="container-lg gap-1 pb-3 flex flex-col rounded dark:border-borderColor border-darkBorder 
-      border mx-auto background bg-customBGDark dark:bg-customBG bg-gradient-to-tr via-transparent to-purple/30 from-orange/30">
+      border mx-auto">
         <div className="flex flex-row justify-between flex-wrap p-4">
           <h2 className="align-self-start">Background</h2>
           <p className="tag spanBorder px-3 rounded-full my-auto mx-3 p-0">
