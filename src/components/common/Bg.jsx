@@ -4,7 +4,7 @@ const BG = () => {
         <img
           src="./img/headerBG.webp"
           srcSet="
-            ./img/headerBGTablet.webp 768w,
+            ./img/headerBGtablet.webp 768w,
             ./img/headerBGLaptop.webp 1024w,
             ./img/headerBG.webp 1920w"
           sizes="(max-width: 480px) 480px,
