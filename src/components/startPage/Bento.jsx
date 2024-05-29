@@ -7,12 +7,12 @@ const Bento = () => {
   const ghProj = [
     {
       img: "./img/thumbnails/auctioneer.webp",
-      desc: "Live auction website built in React using finished API. Group Project.",
+      desc: "Live auction website built in React using finished API.",
       link: "https://github.com/sarahthebest/auctioneer",
     },
     {
       img: "./img/thumbnails/auctioneer.webp",
-      desc: "Recipe website where users can search and find recipes. School project.",
+      desc: "Recipe website where users can search and find recipes.",
       link: "https://github.com/sarahthebest/Recipefetcher",
     },
     {
@@ -59,14 +59,14 @@ const Bento = () => {
         </div>
         <div className="bento3 col-span-2 rounded overflow-hidden"></div>
         <div className="bento4 col-span-4 sm:col-span-2 overflow-hidden">
-          <h3 className="mono">GitHub highlights:</h3>
           <div
             style={{ maxHeight: "280px" }}
             className="slider-container rounded h-full overflow-hidden align-items-center"
           >
             <Slider className="w-5/6 mx-auto" {...settings}>
               {ghProj.map((project, index) => (
-                <div key={index}>
+                <div className="text-center" key={index}>
+                  <p>{project.desc}</p>
                   <a
                     href={project.link}
                     target="_blank"
@@ -74,7 +74,7 @@ const Bento = () => {
                   >
                     <img
                       src={project.img}
-                      className="mx-auto"
+                      className="mx-auto rounded mt-1"
                       alt={project.desc}
                     />
                   </a>
