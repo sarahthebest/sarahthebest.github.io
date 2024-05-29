@@ -58,7 +58,7 @@ const Bento = () => {
           />
         </div>
         <div className="bento3 col-span-2 rounded overflow-hidden"></div>
-        <div className="bento4 col-span-4 sm:col-span-2  overflow-hidden">
+        <div className="bento4 col-span-4 sm:col-span-2 overflow-hidden">
           <h3 className="mono">GitHub highlights:</h3>
           <div
             style={{ maxHeight: "280px" }}

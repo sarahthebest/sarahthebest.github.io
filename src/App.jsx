@@ -1,4 +1,3 @@
-import "./assets/css/App.css";
 import About from "./components/About";
 import Home from "./components/Home";
 import PortfolioCase from "./components/PortfolioCase";

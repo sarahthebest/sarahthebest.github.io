@@ -180,12 +180,12 @@ const Velocity = () => {
                 risk aversion, lack of market knowledge, and overall financial
                 insecurity due to a volatile economy.
               </p>
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-fit place-content-center">
+              <div className="mt-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 w-fit place-content-center">
                 {wireframes.map((image, index) => (
                   <img
                     key={index}
                     src={image.src}
-                    className="frame"
+                    className="frame w-5/6 md:w-full"
                     alt={image.alt}
                   />
                 ))}
