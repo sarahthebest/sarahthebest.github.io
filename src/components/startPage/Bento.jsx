@@ -43,7 +43,7 @@ const Bento = () => {
           <p>Currently seeking internship positions for fall 2024!</p>
           <a
             className="button hvr-grow-shadow customBorder rounded p-3 mt-2 dark:bg-dark bg-light"
-            href="./img/cv.pdf"
+            href="./img/CV.pdf"
             target="_blank"
             role="button"
           >
