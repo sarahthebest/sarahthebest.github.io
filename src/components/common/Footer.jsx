@@ -13,7 +13,7 @@ const Footer = () => {
             </a>
             <img
               className="footerArrow ms-2 mt-4 dark:invert invert-0"
-              src="src\assets\img\arrowRight.webp"
+              src="./img/arrowRight.webp"
               alt="arrow pointing downward left"
             />
           </div>

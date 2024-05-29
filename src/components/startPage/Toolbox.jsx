@@ -14,15 +14,15 @@ const Toolbox = () => {
   ];
 
   const frontend = [
-    { text: "HTML 5", img: "src/assets/img/icons/html.webp" },
-    { text: "CSS logo", img: "src/assets/img/icons/css.webp" },
-    { text: "Javascript logo", img: "src/assets/img/icons/js.png" },
-    { text: "React logo", img: "src/assets/img/icons/react.webp" },
-    { text: "Node logo", img: "src/assets/img/icons/node.webp" },
-    { text: "GitHub logo", img: "src/assets/img/icons/gh.webp" },
-    { text: "Bootstrap Logo", img: "src/assets/img/icons/bs.webp" },
-    { text: "Tailwind Logo", img: "src/assets/img/icons/tailwind.svg" },
-    { text: "Docker Logo", img: "src/assets/img/icons/docker.webp" }
+    { text: "HTML 5", img: "./img/icons/html.webp" },
+    { text: "CSS logo", img: "./img/icons/css.webp" },
+    { text: "Javascript logo", img: "./img/icons/js.png" },
+    { text: "React logo", img: "./img/icons/react.webp" },
+    { text: "Node logo", img: "./img/icons/node.webp" },
+    { text: "GitHub logo", img: "./img/icons/gh.webp" },
+    { text: "Bootstrap Logo", img: "./img/icons/bs.webp" },
+    { text: "Tailwind Logo", img: "./img/icons/tailwind.svg" },
+    { text: "Docker Logo", img: "./img/icons/docker.webp" }
 
   ];
 
@@ -39,7 +39,7 @@ const Toolbox = () => {
           style={{ minHeight: "200px" }}
         >
           <img
-            src="src\assets\img\arch.webp"
+            src="./img/arch.webp"
             className="absolute textDecoLeft dark:invert invert-0"
             style={{ height: "150px" }}
             alt="arch graphic facing left."
@@ -67,7 +67,7 @@ const Toolbox = () => {
           style={{ minHeight: "200px" }}
         >
           <img
-            src="src\assets\img\archRight.webp"
+            src="./img/archRight.webp"
             className="absolute textDeco dark:invert invert-0"
             alt="arch graphic facing right."
             style={{ height: "150px" }}

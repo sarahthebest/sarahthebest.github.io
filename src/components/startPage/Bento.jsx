@@ -6,17 +6,17 @@ import "slick-carousel/slick/slick-theme.css";
 const Bento = () => {
   const ghProj = [
     {
-      img: "src/assets/img/thumbnails/auctioneer.webp",
+      img: "./img/thumbnails/auctioneer.webp",
       desc: "Live auction website built in React using finished API. Group Project.",
       link: "https://github.com/sarahthebest/auctioneer",
     },
     {
-      img: "src/assets/img/thumbnails/auctioneer.webp",
+      img: "./img/thumbnails/auctioneer.webp",
       desc: "Recipe website where users can search and find recipes. School project.",
       link: "https://github.com/sarahthebest/Recipefetcher",
     },
     {
-      img: "src/assets/img/thumbnails/auctioneer.webp",
+      img: "./img/thumbnails/auctioneer.webp",
       desc: "Webshop built in React with FakeStoreAPI.",
       link: "https://github.com/sarahthebest/Recipefetcher",
     },
@@ -43,7 +43,7 @@ const Bento = () => {
           <p>Currently seeking internship positions for fall 2024!</p>
           <a
             className="button hvr-grow-shadow customBorder rounded p-3 mt-2 dark:bg-dark bg-light"
-            href="src/assets/img/cv.pdf"
+            href="./img/cv.pdf"
             target="_blank"
             role="button"
           >
@@ -53,7 +53,7 @@ const Bento = () => {
         <div className="bento2 col-span-2 sm:col-span-1 rounded overflow-hidden">
           <img
             className="selfie w-full h-full"
-            src="src/assets/img/selfie2.webp"
+            src="./img/selfie2.webp"
             alt="Image of a woman with shoulder-length dark brown hair and glasses giving a thumbs up."
           />
         </div>

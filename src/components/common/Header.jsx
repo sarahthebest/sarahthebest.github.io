@@ -74,7 +74,7 @@ const Header = () => {
           <div className="cardHole bg-light dark:bg-bg customBorder m-1 p-2 rounded-full absolute top-0 start-0"></div>
           <img
             className="absolute top-0"
-            src="src\assets\img\avatar.webp"
+            src="./img/avatar.webp"
             id="avatar"
             alt="Cartoon of myself."
           />

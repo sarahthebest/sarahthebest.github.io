@@ -17,7 +17,7 @@ const Cases = () => {
           <h3 className="mb-3">What i've been up to</h3>
           <img
             className="dark:invert invert-0 img-fluid hvr-float"
-            src="src\assets\img\Arrow.webp"
+            src="./img/Arrow.webp"
             alt="arrow pointing down."
           />
         </div>

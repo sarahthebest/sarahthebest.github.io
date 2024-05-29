@@ -2,7 +2,7 @@
     "projects": [
         {
             "title": "Velocity",
-            "thumbnail": "src/assets/img/thumbnails/velocity.webp",
+            "thumbnail": "./img/thumbnails/velocity.webp",
             "imgAlt": "Thumbnail of my wireframes",
             "link": "/velocity",
             "description": "Proof of concept for a mobile trading app.",
@@ -13,7 +13,7 @@
         },
         {
             "title": "Portfolio Redesign",
-            "thumbnail": "src/assets/img/thumbnails/portfolio.webp",
+            "thumbnail": "./img/thumbnails/portfolio.webp",
             "imgAlt": "A scrolling screenshot of my old portfolio",
             "link": "/portfolioCase",
             "description": "Bringing my old portfolio into the future!",
