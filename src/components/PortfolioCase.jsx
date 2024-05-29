@@ -20,7 +20,7 @@ const PortfolioCase = () => {
        mt-10 rounded container-lg auto-rows-auto grid-cols-1 grid mx-auto rounded-bottom"
       >
         <FadeIn selector="grid-item1 mx-auto flex flex-row fade-in-section">
-          <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
+          <div className="gap-3 flex flex-col">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 1</h2>
               <h2 className="ms-4 cursive">.Ideation</h2>
@@ -49,7 +49,7 @@ const PortfolioCase = () => {
         </FadeIn>
 
         <FadeIn selector="grid-item2 mx-auto flex flex-row fade-in-section">
-          <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
+          <div className="gap-3 flex flex-col">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 2</h2>
               <h2 className="ms-4 cursive">.Action!</h2>
@@ -76,7 +76,7 @@ const PortfolioCase = () => {
           </div>
         </FadeIn>
         <FadeIn selector="grid-item3 mx-auto flex flex-row fade-in-section">
-          <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
+          <div className="gap-3 flex flex-col">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 3</h2>
               <h2 className="ms-4 cursive">.Toolbox</h2>
@@ -100,7 +100,7 @@ const PortfolioCase = () => {
           </div>
         </FadeIn>
         <FadeIn selector="grid-item4 mx-auto flex flex-row fade-in-section">
-          <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
+          <div className="gap-3 flex flex-col">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 4</h2>
               <h2 className="ms-4 cursive">.Setbacks</h2>

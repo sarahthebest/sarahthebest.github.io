@@ -32,8 +32,8 @@ const Bento = () => {
 
   return (
     <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG">
-      <div className="bento grid grid-cols-4 grid-rows-3 sm:grid-rows-2 gap-4 rounded customBorder my">
-        <div className="bento1 col-span-4 sm:col-span-3 p-2 text-center rounded customBorder align-items-center">
+      <div className="p-4 h-fit grid grid-cols-4 grid-rows-3 sm:grid-rows-2 gap-4 rounded customBorder my">
+        <div className="col-span-4 sm:col-span-3 p-2 text-center rounded customBorder align-items-center">
           <h3 className="mb-4">(｀･ω･´)ﾉ</h3>
           <p>
             Hello there! I'm <span className="cursive">Sarah</span>, a curious

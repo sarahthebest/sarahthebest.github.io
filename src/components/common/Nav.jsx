@@ -42,8 +42,10 @@ const Nav = () => {
 
   return (
     <nav className="navbar sticky top-3 rounded-full z-50">
-      <div className="h-15 pe-4 rounded-full navbar-links backdrop-blur-md
-      customBorder bg-bg/60 dark:bg-light/60 text-center mx-auto flex flex-row justify-between">
+      <div
+        className="h-15 pe-4 rounded-full navbar-links backdrop-blur-md
+      customBorder bg-bg/60 dark:bg-light/60 text-center mx-auto flex flex-row justify-between"
+      >
         <Link
           className="navbar-brand ms-0 ps-0 flex items-center justify-center"
           onClick={(e) => e.preventDefault()}
@@ -91,7 +93,10 @@ const Nav = () => {
           </li>
         </ul>
         {/* MOBILE NAV */}
-        <div onClick={handleNav} className="block md:hidden my-auto ms-2 invert-0 dark:invert">
+        <div
+          onClick={handleNav}
+          className="block md:hidden my-auto ms-2 invert-0 dark:invert"
+        >
           {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
         <ul
@@ -103,14 +108,17 @@ const Nav = () => {
         >
           {/* Mobile Navigation Items */}
           {navItems.map((item, index) => (
-            <li key={index} className="cursor-pointer duration-300 nav-item py-2 px-4">
-              <a
+            <li
+              key={index}
+              className="cursor-pointer duration-300 nav-item py-2 px-4"
+            >
+              <Link
                 className="link dark:text-dark text-light"
-                href={item.link}
+                to={item.link}
                 rel="noopener noreferrer"
               >
                 {item.text}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

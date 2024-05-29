@@ -51,14 +51,14 @@ const Velocity = () => {
        mt-10 rounded container-lg auto-rows-auto grid-cols-1 grid mx-auto rounded-bottom"
       >
         <FadeIn selector="grid-item1 mx-auto flex flex-row fade-in-section">
-          <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
+          <div className="gap-3 flex flex-col">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 1</h2>
               <h2 className="ms-4 cursive">.Definition</h2>
             </div>
             <p>
               We initiated the project by exploring the
-              <span className="font-bold">problem space</span> and defining the
+              <span className="font-bold"> problem space</span> and defining the
               problem.
               <br />I also wrote a project brief and formed a timeplan for the
               project.
@@ -76,7 +76,7 @@ const Velocity = () => {
           </div>
         </FadeIn>
         <FadeIn selector="grid-item2 mx-auto flex flex-row fade-in-section">
-          <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
+          <div className="gap-3 flex flex-col">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 2</h2>
               <h2 className="ms-4 cursive">.Research</h2>
@@ -86,7 +86,7 @@ const Velocity = () => {
               understand
               <br />
               who our <span className="font-bold">users</span> are and their
-              <span className="font-bold">goals.</span>
+              <span className="font-bold"> goals.</span>
             </p>
             <div className="competitorAnalysis gap-2 flex flex-col">
               <h3>Competitor Analysis</h3>
@@ -159,7 +159,7 @@ const Velocity = () => {
           </div>
         </FadeIn>
         <FadeIn selector="grid-item3 mx-auto flex flex-row fade-in-section">
-          <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
+          <div className="gap-3 flex flex-col">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 3</h2>
               <h2 className="ms-4 cursive">.Ideation</h2>
@@ -167,7 +167,7 @@ const Velocity = () => {
             <p>
               After establishing the problem and carving out potential users I
               began <br /> to work on the
-              <span className="font-bold">design</span> of the app and the user
+              <span className="font-bold"> design</span> of the app and the user
               journey.
             </p>
             <div>
@@ -180,7 +180,7 @@ const Velocity = () => {
                 risk aversion, lack of market knowledge, and overall financial
                 insecurity due to a volatile economy.
               </p>
-              <div className="gallery mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full place-content-center">
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-fit place-content-center">
                 {wireframes.map((image, index) => (
                   <img
                     key={index}
@@ -194,7 +194,7 @@ const Velocity = () => {
           </div>
         </FadeIn>
         <FadeIn selector="grid-item4 mx-auto flex flex-row fade-in-section">
-          <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
+          <div className="gap-3 flex flex-col">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 4</h2>
               <h2 className="ms-4 cursive">.Prototyping</h2>
@@ -247,7 +247,7 @@ const Velocity = () => {
           </div>
         </FadeIn>
         <FadeIn selector="grid-item5 mx-auto flex flex-row fade-in-section">
-          <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
+          <div className="gap-3 flex flex-col">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Results!</h2>
             </div>

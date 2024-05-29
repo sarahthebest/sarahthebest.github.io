@@ -47,11 +47,6 @@
   width: 300px;
 }
 
-.bento {
-  height: fit-content;
-  padding: 20px;
-}
-
 .bento2 {
   max-height: 300px;
 }
@@ -91,11 +86,6 @@
 
 .onlineBar:hover > p {
   color: var(--orange);
-}
-
-.col-3 {
-  overflow: hidden;
-  background-color: var(--dark);
 }
 
 .projects {
@@ -189,7 +179,6 @@ section {
   line-height: 4rem;
   position: relative;
   overflow: hidden;
-  /* width: 350px; */
   border-left: 0 !important;
   border-right: 0 !important;
 }

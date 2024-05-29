@@ -36,28 +36,6 @@
     flex-direction: row;
   }
   
-  /* accordion */
-  #bootstrap-overrides .accordion-item {
-    background-color: gainsboro;
-  }
-  #bootstrap-overrides .accordion-header {
-    background-color: var(--light);
-  }
-  #bootstrap-overrides .accordion-button:not(.collapsed) {
-    color: var(--dark);
-    background-color: var(--light);
-    border: 0;
-    box-shadow: none;
-  }
-  #bootstrap-overrides.accordion-button:focus {
-    border-color: none;
-    outline: 0;
-    box-shadow: none;
-  }
-  #bootstrap-overrides .accordion {
-    --bs-accordion-bg: var(--light);
-  }
-  
   .frame {
     border-radius: 2%;
   }
@@ -71,49 +49,4 @@
     font-size: 1.2rem;
     z-index: 1;
   }
-  
-  /* font styles */
-  blockquote {
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding-left: 10px;
-    line-height: 40px;
-    margin-top: 10%;
-    border: 4px solid var(--dark);
-    border-top: 0;
-    border-bottom: 0;
-    border-right: 0;
-  }
-  
-  /* Darkmode */
-  /* body.DarkToLight blockquote {
-    border: 4px solid var(--dark);
-    border-top: 0;
-    border-bottom: 0;
-    border-right: 0;
-  }
-  
-  body.DarkToLight .customBorder {
-    border: var(--dark) 1px solid;
-  }
-  
-  body.DarkToLight .grid-container {
-    background-color: rgba(23, 23, 23, 0.3254901961);
-  }
-  
-  body.DarkToLight li {
-    color: var(--dark);
-  }
-  
-  body.DarkToLight .contents li {
-    color: var(--dark);
-  }
-  body.DarkToLight .frame {
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.636);
-  }
-  body.DarkToLight #bootstrap-overrides .accordion-item {
-    color: var(--dark);
-    background-color: var(--dark);
-    border: 0;
-    box-shadow: none;
-  } */
+

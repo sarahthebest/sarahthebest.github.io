@@ -1,12 +1,6 @@
 /*  beeg screen */
 @media screen and (max-width: 10000px) {
 
-    .container-lg {
-      position: relative;
-    }
-    #bootstrap-overrides h4 {
-      margin-top: 0;
-    }
   }
   /* medium */
   @media screen and (max-width: 880px) {
