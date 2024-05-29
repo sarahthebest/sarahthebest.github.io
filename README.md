@@ -1,8 +1,26 @@
-# React + Vite
+<h1>Welcome to my <a href="https://emmoth.me/" target="_blank">portfolio</a></h1>
+<p>This portfolio is a redesign of a old portfolio from 2021 and built in React with Tailwind.</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+<h2>Sarah Emmoth - Frontend Student</h2>
+<p>I'm a highly motivated frontend developer striving to deliver seamless online experiences.</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p>Portfolio projects</p>
+<ul>
+  <li><a href="https://emmoth.me/Velocity.html" target="_blank">Velocity</a></li>
+  <ul>
+    <li>
+    A project i did during a internship at Lines Designworks.
+    </li>
+    <li>
+    I got to do research, ui-design and ux-design.
+    </li>
+  </ul>
+    
+  <li><a href="https://emmoth.me/portfolioCase.html" target="_blank">Portfolio redesign</a></li>
+  <ul>
+    <li>
+    Detailing the process of redesigning my old portfolio.
+    </li>
+  </ul>
+</ul>
