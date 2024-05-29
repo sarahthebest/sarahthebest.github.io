@@ -92,9 +92,6 @@
   .container-lg {
     width: 100%;
   }
-  .container-lg * :hover {
-    pointer-events: none !important;
-  }
   .circle {
     width: 300px;
     height: 400px;

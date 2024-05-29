@@ -25,7 +25,7 @@ const Cases = () => {
        border border-l-0 border-r-0 border-b-0 fade-in-section"
             >
               <div
-                className="align-items-center overflow-y-scroll"
+                className="align-items-center"
                 style={{ height: "300px" }}
               >
                 <img

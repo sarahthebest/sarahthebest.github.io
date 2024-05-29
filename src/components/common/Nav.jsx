@@ -98,7 +98,7 @@ const Nav = () => {
           className={
             nav
               ? "fixed top-20 place-items-center bg-bg dark:bg-light rounded ease-in-out duration-500 md:hidden flex flex-col"
-              : "fixed top-20 w-full bg-[#000300] ease-in-out duration-500 hidden"
+              : " ease-in-out duration-500 hidden"
           }
         >
           {/* Mobile Navigation Items */}
@@ -107,7 +107,6 @@ const Nav = () => {
               <a
                 className="link dark:text-dark text-light"
                 href={item.link}
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 {item.text}

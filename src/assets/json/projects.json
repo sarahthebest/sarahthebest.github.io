@@ -1,28 +1,35 @@
 {
     "projects": [
         {
-            "title":"Velocity",
-            "thumbnail":"src/assets/img/thumbnails/velocity.webp",
-            "imgAlt":"Thumbnail of my wireframes",
-            "link":"/velocity",
-            "description":"Proof of concept for a mobile trading app.",
-            "tags":["UX-design", "UI-design", "Research"],
-            "date":"2021 Nov - 2022 Apr",
-            "background":"Velocity is a project I worked on during my internship at a design agency in Bangkok. I was responsible for research, wireframing, and prototyping.",
-            "mission":"The main scope was to develop a mobile trading app for the Thai market. Through Velocity, users can earn capital and trade stocks in a safe environment. Velocity makes it possible to trade, sell, and buy stocks at any time for anyone."
+            "title": "Velocity",
+            "thumbnail": "src/assets/img/thumbnails/velocity.webp",
+            "imgAlt": "Thumbnail of my wireframes",
+            "link": "/velocity",
+            "description": "Proof of concept for a mobile trading app.",
+            "tags": ["UX-design", "UI-design", "Research"],
+            "date": "2021 Nov - 2022 Apr",
+            "background": "Velocity is a project I worked on during my internship at a design agency in Bangkok. I was responsible for research, wireframing, and prototyping.",
+            "mission": "The main scope was to develop a mobile trading app for the Thai market. Through Velocity, users can earn capital and trade stocks in a safe environment. Velocity makes it possible to trade, sell, and buy stocks at any time for anyone."
         },
         {
-            "title":"Portfolio Redesign",
-            "thumbnail":"src/assets/img/thumbnails/portfolio.webp",
-            "imgAlt":"A scrolling screenshot of my old portfolio",
-            "link":"/portfolioCase",
-            "description":"Bringing my old portfolio into the future!",
-            "tags":["Frontend", "UI-design"],
-            "date":"2023 Dec - 2024 Feb",
-            "background":"Fall 2023 i enrolled in a two-year frontend program and in preparation for my internship period in fall 2024 i wanted to revamp my old portfolio. What better way to demonstrate my skills than by taking on the challenge of building something meaningful myself?",
-            "mission":"Redesign my portfolio to reflect my personal style and use new stuff. This isn't a formal case study. Think of it more as a personal blog post. No exhaustive research, just a passionate endeavor to create a online space to showcase myself and my progress. ",
-            "note":"As of 22/05/2024 I redid my portfolio AGAIN! in React with the aim of getting better at React and making my portfolio smoother. Parts of this 'case study' has been edited."
+            "title": "Portfolio Redesign",
+            "thumbnail": "src/assets/img/thumbnails/portfolio.webp",
+            "imgAlt": "A scrolling screenshot of my old portfolio",
+            "link": "/portfolioCase",
+            "description": "Bringing my old portfolio into the future!",
+            "tags": ["Frontend", "UI-design"],
+            "date": "2023 Dec - 2024 Feb",
+            "background": "Fall 2023 I enrolled in a two-year frontend program and in preparation for my internship period in fall 2024, I wanted to revamp my old portfolio. What better way to demonstrate my skills than by taking on the challenge of building something meaningful myself?",
+            "mission": "Redesign my portfolio to reflect my personal style and use new technologies. This isn't a formal case study but more of a personal blog post. No exhaustive research, just a passionate endeavor to create an online space to showcase myself and my progress.",
+            "note": "As of 22/05/2024, I redid my portfolio AGAIN! in React with the aim of getting better at React and making my portfolio smoother. Parts of this 'case study' have been edited."
+        },
+        {
+            "title": "Auctioneer",
+            "thumbnail": "src/assets/img/thumbnails/auctioneer.webp",
+            "imgAlt": "Homepage of Auctioneer app.",
+            "link": "https://github.com/sarahthebest/auctioneer",
+            "description": "Auction website built with React and MUI styling.",
+            "tags": ["Frontend", "UI-design", "React", "MUI"]           
         }
-
     ]
 }

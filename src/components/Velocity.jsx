@@ -1,8 +1,11 @@
+/* eslint-disable no-irregular-whitespace */
+/* eslint-disable react/no-unescaped-entities */
 import "../assets/css/projectStyles.css";
 import BackgroundCard from "./projectPages/BackgroundCard";
 import ProjectHeader from "./projectPages/ProjectHeader";
 import projectData from "../assets/json/projects.json";
 import ProjectBG from "./projectPages/ProjectBG";
+import FadeIn from "./common/FadeIn";
 
 const Velocity = () => {
   let project = projectData.projects.find((proj) => proj.title === "Velocity");
@@ -13,10 +16,10 @@ const Velocity = () => {
       <ProjectHeader project={project} />
       <BackgroundCard project={project} />
       <div
-        className="grid-container overflow-hidden customBorder text-wrap px-4 bg-customBGDark dark:bg-customBG
-       mt-4 rounded container-lg auto-rows-auto grid-cols-1 grid mx-auto rounded-bottom"
+        className="grid-container text-wrap gap-y-20 px-4 xl:px-0
+       mt-10 rounded container-lg auto-rows-auto grid-cols-1 grid mx-auto rounded-bottom"
       >
-        <div id="grid-item2" className="p-4 mx-auto flex flex-row">
+        <FadeIn selector="grid-item1 mx-auto flex flex-row fade-in-section">
           <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 1</h2>
@@ -40,8 +43,8 @@ const Velocity = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div id="grid-item3" className="p-4 mx-auto flex flex-row">
+        </FadeIn>
+        <FadeIn selector="grid-item2 mx-auto flex flex-row fade-in-section">
           <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 2</h2>
@@ -123,8 +126,8 @@ const Velocity = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div id="grid-item4" className="p-4 mx-auto flex flex-row">
+        </FadeIn>
+        <FadeIn selector="grid-item3 mx-auto flex flex-row fade-in-section">
           <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 3</h2>
@@ -185,8 +188,8 @@ const Velocity = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div id="grid-item5" className="p-4 mx-auto flex flex-row">
+        </FadeIn>
+        <FadeIn selector="grid-item4 mx-auto flex flex-row fade-in-section">
           <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Phase 4</h2>
@@ -238,8 +241,8 @@ const Velocity = () => {
               />
             </div>
           </div>
-        </div>
-        <div id="grid-item6" className="p-4 mx-auto flex flex-row pb-10">
+        </FadeIn>
+        <FadeIn selector="grid-item5 mx-auto flex flex-row fade-in-section">
           <div className="border-b-0 border-r-0 gap-3 flex flex-col border-t-0">
             <div className="title w-full flex justify-between">
               <h2 className="headline">Results!</h2>
@@ -266,7 +269,7 @@ const Velocity = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </>
   );
