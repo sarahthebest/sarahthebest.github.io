@@ -1,30 +1,35 @@
+/* eslint-disable react/no-unescaped-entities */
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Bento = () => {
   const ghProj = [
     {
-      img: "src/assets/img/thumbnails/Auctioneer.webp",
+      img: "src/assets/img/thumbnails/auctioneer.webp",
       desc: "Live auction website built in React using finished API. Group Project.",
       link: "https://github.com/sarahthebest/auctioneer",
     },
     {
-      img: "src/assets/img/thumbnails/recipeFetcher.webp",
+      img: "src/assets/img/thumbnails/auctioneer.webp",
       desc: "Recipe website where users can search and find recipes. School project.",
       link: "https://github.com/sarahthebest/Recipefetcher",
     },
     {
-      img: "src/assets/img/thumbnails/webshop.webp",
-      desc: "Webshop built in React with FakeStoreAPI",
-      link: "",
+      img: "src/assets/img/thumbnails/auctioneer.webp",
+      desc: "Webshop built in React with FakeStoreAPI.",
+      link: "https://github.com/sarahthebest/Recipefetcher",
     },
   ];
+
   var settings = {
-    dots: true,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG">
       <div className="bento grid grid-cols-4 grid-rows-3 sm:grid-rows-2 gap-4 rounded customBorder my">
@@ -37,8 +42,7 @@ const Bento = () => {
           </p>
           <p>Currently seeking internship positions for fall 2024!</p>
           <a
-            className="button hvr-grow-shadow customBorder rounded p-3 mt-2 
-          dark:bg-dark bg-light"
+            className="button hvr-grow-shadow customBorder rounded p-3 mt-2 dark:bg-dark bg-light"
             href="src/assets/img/cv.pdf"
             target="_blank"
             role="button"
@@ -54,16 +58,23 @@ const Bento = () => {
           />
         </div>
         <div className="bento3 col-span-2 rounded overflow-hidden"></div>
-        <div className="bento4 col-span-4 sm:col-span-2 rounded overflow-hidden">
-          <div className="h-full text-start">
-            <h3 className="mono">GitHub highlights:</h3>
-            <Slider className="carousel mx-auto relative bg-grey-900 rounded overflow-hidden">
+        <div className="bento4 col-span-4 sm:col-span-2  overflow-hidden">
+          <h3 className="mono">GitHub highlights:</h3>
+          <div
+            style={{ maxHeight: "280px" }}
+            className="slider-container rounded h-full overflow-hidden align-items-center"
+          >
+            <Slider className="w-5/6 mx-auto" {...settings}>
               {ghProj.map((project, index) => (
-                <div key={index} className="flex flex-col h-full relative">
-                  <a href={project.link} target="_blank">
+                <div key={index}>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src={project.img}
-                      className="w-full object-fill mx-auto"
+                      className="mx-auto"
                       alt={project.desc}
                     />
                   </a>

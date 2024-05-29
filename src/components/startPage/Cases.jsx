@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+import { Link } from "react-router-dom";
 import projectData from "../../assets/json/projects.json";
 import FadeIn from "../common/FadeIn";
 
@@ -20,22 +22,22 @@ const Cases = () => {
           />
         </div>
         {projects.map((project, index) => (
-          <a key={index} className="linkUnstyled" href={project.link}>
+          <Link key={index} className="linkUnstyled" to={project.link}>
             <FadeIn selector="case m-0 p-0 dark:border-borderColor border-darkBorder 
        border border-l-0 border-r-0 border-b-0 fade-in-section"
             >
               <div
-                className="align-items-center"
+                className="align-items-center overflow-hidden"
                 style={{ height: "300px" }}
               >
                 <img
-                  className="w-full"
+                  className="w-full object-contain"
                   src={project.thumbnail}
                   alt={project.imgAlt}
                 />
               </div>
               <div className="flex2 p-0 align-items-center text-center">
-                <div className="proj p-3 d-flex gap-2 flex-column align-items-center h-96">
+                <div className="proj p-3 d-flex gap-2 flex-column align-items-center">
                   <h2 className="cursive">{project.title}</h2>
                   <p>{project.description}</p>
                   <p>
@@ -51,13 +53,13 @@ const Cases = () => {
                 </div>
               </div>
             </FadeIn>
-          </a>
+          </Link>
         ))}
-        <FadeIn selector="rounded-bottom col-12 m-0 p-0 position-relative align-items-center teaser
-          dark:border-borderColor border-darkBorder border border-l-0 border-r-0 border-b-0 fade-in-section"
+        <div className="rounded-bottom col-12 m-0 p-0 position-relative align-items-center teaser
+          dark:border-borderColor border-darkBorder border border-l-0 border-r-0 border-b-0"
         >
           <p>Stay tuned for more...</p>
-        </FadeIn>
+        </div>
       </section>
     </>
   );

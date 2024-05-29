@@ -10,6 +10,37 @@ import FadeIn from "./common/FadeIn";
 const Velocity = () => {
   let project = projectData.projects.find((proj) => proj.title === "Velocity");
 
+  const wireframes = [
+    {
+      src: "src/assets/img/Lofi-home-1.webp",
+      alt: "Lofi prototype of the app homescreen",
+    },
+    {
+      src: "src/assets/img/Lofi-home-2.webp",
+      alt: "Lofi prototype of the app homescreen subsection achievements.",
+    },
+    {
+      src: "src/assets/img/Lofi-home.webp",
+      alt: "Lofi prototype of the app homescreen subsection goals.",
+    },
+    {
+      src: "src/assets/img/Lofi-portfolio-1.webp",
+      alt: "Lofi prototype of the app orders.",
+    },
+    {
+      src: "src/assets/img/Lofi-portfolio.webp",
+      alt: "Lofi prototype of the app portfolio.",
+    },
+    {
+      src: "src/assets/img/Lofi-stock.webp",
+      alt: "Lofi prototype of the screen of a stock.",
+    },
+    {
+      src: "src/assets/img/lofi-stock2.webp",
+      alt: "Lofi prototype of buying a stock.",
+    },
+  ];
+
   return (
     <>
       <ProjectBG />
@@ -26,7 +57,7 @@ const Velocity = () => {
               <h2 className="ms-4 cursive">.Definition</h2>
             </div>
             <p>
-              We initiated the project by exploring the{" "}
+              We initiated the project by exploring the
               <span className="font-bold">problem space</span> and defining the
               problem.
               <br />I also wrote a project brief and formed a timeplan for the
@@ -150,41 +181,14 @@ const Velocity = () => {
                 insecurity due to a volatile economy.
               </p>
               <div className="gallery mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full place-content-center">
-                <img
-                  src="src\assets\img\Lofi-home-1.webp"
-                  className="frame"
-                  alt="Lofi prototype of the app homescreen"
-                />
-                <img
-                  src="src\assets\img\Lofi-home-2.webp"
-                  className="frame"
-                  alt="Lofi prototype of the app homescreen subsection achievemnts."
-                />
-                <img
-                  src="src\assets\img\Lofi-home.webp"
-                  className="frame"
-                  alt="Lofi prototype of the app homescreen subsection goals."
-                />
-                <img
-                  src="src\assets\img\Lofi-portfolio-1.webp"
-                  className="frame"
-                  alt="Lofi prototype of the app orders."
-                />
-                <img
-                  src="src\assets\img\Lofi-portfolio.webp"
-                  className="frame"
-                  alt="Lofi prototype of the app portfolio."
-                />
-                <img
-                  src="src\assets\img\Lofi-stock.webp"
-                  className="frame"
-                  alt="Lofi prototype of the screen of a stock."
-                />
-                <img
-                  src="src\assets\img\lofi-stock2.webp"
-                  className="frame"
-                  alt="Lofi prototype of buying a stock."
-                />
+                {wireframes.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image.src}
+                    className="frame"
+                    alt={image.alt}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -235,7 +239,7 @@ const Velocity = () => {
                 alt="Lofi view of the stock screen"
               />
               <img
-                src="src\assets\img\src\assets\img\stockscreen.webp"
+                src="src\assets\img\Stockscreen-chart.webp"
                 className="frame h-96"
                 alt="Hifi version"
               />

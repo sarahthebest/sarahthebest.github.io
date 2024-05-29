@@ -41,7 +41,7 @@ const Nav = () => {
   }, [isDarkMode]);
 
   return (
-    <nav className="navbar sticky top-3 rounded-full">
+    <nav className="navbar sticky top-3 rounded-full z-50">
       <div className="h-15 pe-4 rounded-full navbar-links backdrop-blur-md
       customBorder bg-bg/60 dark:bg-light/60 text-center mx-auto flex flex-row justify-between">
         <Link

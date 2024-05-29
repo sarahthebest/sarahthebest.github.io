@@ -32,9 +32,6 @@
 
 /* big screen  */
 @media screen and (max-width: 10000px) {
-  *:hover {
-    pointer-events: all;
-  }
   p {
     font-size: 1.2rem;
   }
@@ -124,6 +121,10 @@
   margin-right: 600px;
 }
 
+.slick-arrow{
+  filter: invert(1);
+}
+
 .spanBorder {
   border: #1717175d 1px solid;
 }
@@ -132,9 +133,6 @@
 }
 .linkUnstyled {
   text-decoration: none;
-}
-.shadow {
-  box-shadow: 1px 10px 10px rgba(160, 160, 160, 0.26);
 }
 /* class to align items center */
 .align-items-center {
@@ -195,9 +193,6 @@
 .navbar-links {
   width: fit-content;
 }
-nav {
-  z-index: 999;
-}
 .link {
   font-family: "Archivo Regular", sans-serif;
   font-size: 1.2rem;
@@ -207,27 +202,14 @@ nav {
   width: fit-content;
 }
 .logo {
-  font-size: 1.5rem;
   width: 60px;
 }
 
-.nav-item {
-  width: fit-content;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.mobile-links{
-  height: fit-content;
-}
 /* footer */
 
 footer {
   height: 300px;
   margin-top: auto;
-}
-.contact {
-  width: fit-content;
 }
 .footerArrow {
   width: 20px;
@@ -254,6 +236,9 @@ body.darkMode .spanBorder {
 }
 body.darkMode .spanBorder:hover {
   border: 1px solid var(--orange);
+}
+body.darkMode .slick-arrow{
+  filter: invert(0);
 }
 body.darkMode .chat:hover {
   text-decoration: underline 2px var(--light);
