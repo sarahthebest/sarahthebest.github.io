@@ -16,9 +16,9 @@ const Bento = () => {
       link: "https://github.com/sarahthebest/Recipefetcher",
     },
     {
-      img: "./img/thumbnails/auctioneer.webp",
-      desc: "Webshop built in React with FakeStoreAPI.",
-      link: "https://github.com/sarahthebest/Recipefetcher",
+      img: "./img/thumbnails/webshop.png",
+      desc: "Webshop built in React with Tailwind.",
+      link: "https://github.com/sarahthebest/webShop",
     },
   ];
 
