@@ -44,7 +44,7 @@ const About = () => {
           className="bento1 h-max col-span-3 sm:col-span-2 relative rounded customBorder text-center flex items-center justify-center"
         >
           <h2 className="text-wrap mono transition-opacity duration-300 hover:opacity-0">
-            Waiting for...
+            Watching...
           </h2>
           <div className="absolute inset-0 overflow-hidden flex items-center justify-center transition-opacity duration-300 opacity-0 hover:opacity-100">
             <img
@@ -57,7 +57,7 @@ const About = () => {
 
         <div className="col-span-2 h-full sm:col-span-1 rounded relative text-center flex items-center justify-center customBorder">
           <h2 className="text-wrap mono transition-opacity duration-300 hover:opacity-0">
-            What I'm reading
+            What I'm reading...
           </h2>
           <div className="absolute inset-0 overflow-hidden flex items-center justify-center transition-opacity duration-300 opacity-0 hover:opacity-100">
             <img
