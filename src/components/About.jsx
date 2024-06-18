@@ -15,7 +15,7 @@ const About = () => {
     {
       company: "Jensen Yrkeshögskola",
       role: "Frontenddeveloper - Websecurity",
-      date: "2023",
+      date: "2023 Aug",
       endDate: "Present",
       desc: "Advanced frontend development, React and styling libraries, Building secure websites."
     },
