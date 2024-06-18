@@ -120,7 +120,7 @@ const About = () => {
                 <p>{experience.desc}</p>
               </div>
               <div className="flex"> 
-                <p>{experience.date} - <span className="p-2 text-indigo-200 bg-purple rounded-full">{experience.endDate}</span></p>
+                <p>{experience.date} - <span className="p-2 text-indigo-100 bg-purple rounded-full hover:bg-orange hover:text-amber-200 duration-500 hover:transition-colors customBorder">{experience.endDate}</span></p>
               </div>
             </div>
           ))}
