@@ -11,6 +11,30 @@ const About = () => {
     bookAlt: "Hyperion - Dan Simmons",
   };
 
+  const experiences = [
+    {
+      company: "Jensen Yrkeshögskola",
+      role: "Frontenddeveloper - Websecurity",
+      date: "2023",
+      endDate: "Present",
+      desc: "Advanced frontend development, React and styling libraries, Building secure websites."
+    },
+    {
+      company: "North Kingdom",
+      role: "UX Internship",
+      date: "2023 Jan",
+      endDate: "2023 Mar",
+      desc: "Conducted desk and user research, Created customer journeys and personas.",
+    },
+    {
+      company: "Lines Designworks",
+      role: "UX Internship",
+      date: "2021 Nov",
+      endDate: "2022 Apr",
+      desc: "Created prototypes and wireframes, Presentation of prototype to stakeholder.",
+    },
+  ];
+
   return (
     <>
       <BG />
@@ -44,11 +68,11 @@ const About = () => {
           </div>
         </div>
         <div
-          style={{ maxHeight: "352px", minHeight: "152px", height:'352px'}}
+          style={{ maxHeight: "352px", minHeight: "152px", height: "352px" }}
           className="bento2 col-span-5 sm:col-span-2 rounded relative text-center flex items-center justify-center"
         >
           <iframe
-            style={{ maxHeight: "352px", minHeight: "152px", height:'352px' }}
+            style={{ maxHeight: "352px", minHeight: "152px", height: "352px" }}
             className="my-auto overflow-hidden"
             src="https://open.spotify.com/embed/playlist/48HFf5IxCvxhS7x0tKCMC0?utm_source=generator&theme=0"
             width="100%"
@@ -80,6 +104,28 @@ const About = () => {
             className="h-full w-full"
             alt="Me in Milano in front of the Duomo."
           />
+        </div>
+      </div>
+      <div className="container-lg mx-auto bg-customBGDark dark:bg-customBG p-4 mt-4 customBorder rounded">
+        <div className="timeline flex flex-row justify-between">
+          <div className="title">
+            <h4>My journey</h4>
+          </div>
+          <div className="experience flex flex-col gap-4">
+          {experiences.map((experience, index) => (
+            <div key={index} className="flex  justify-between bg-white/20 p-4 rounded-lg">
+              <div className="">
+                <p className="font-bold">{experience.company}</p>
+                <p>{experience.role}</p>
+                <p>{experience.desc}</p>
+              </div>
+              <div className="flex"> 
+                <p>{experience.date} - <span className="p-2 text-indigo-200 bg-purple rounded-full">{experience.endDate}</span></p>
+              </div>
+            </div>
+          ))}
+
+          </div>
         </div>
       </div>
     </>

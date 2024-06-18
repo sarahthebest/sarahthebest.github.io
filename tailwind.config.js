@@ -15,7 +15,7 @@ export default {
         light: "#fbfbfb",
         orange: "#ff6040",
         bg: "#1e1222",
-        purple: "#9141e7",
+        purple: "#4338ca",
         borderColor: "rgba(255, 255, 255, 0.389)",
         darkBorder: "#1717175d",
         customBG: "rgba(0, 0, 0, 0.786)",
