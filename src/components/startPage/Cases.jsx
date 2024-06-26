@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 import projectData from "../../assets/json/projects.json";
 import FadeIn from "../common/FadeIn";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 const Cases = () => {
   let projects = projectData.projects;
@@ -23,7 +25,8 @@ const Cases = () => {
         </div>
         {projects.map((project, index) => (
           <Link key={index} className="linkUnstyled" to={project.link}>
-            <FadeIn selector="case m-0 p-0 dark:border-borderColor border-darkBorder 
+            <FadeIn
+              selector="case m-0 p-0 dark:border-borderColor border-darkBorder 
        border border-l-0 border-r-0 border-b-0 fade-in-section"
             >
               <div
@@ -36,7 +39,12 @@ const Cases = () => {
                   alt={project.imgAlt}
                 />
               </div>
-              <div className="flex2 p-0 align-items-center text-center">
+              <div className="flex2 p-0 text-center">
+                <div className="iconWrapper p-3 w-full justify-end flex">
+                <IconContext.Provider value={{ className: "linkIcon" }}>
+                  <FaExternalLinkAlt />
+                  </IconContext.Provider>
+                </div>
                 <div className="proj p-3 d-flex gap-2 flex-column align-items-center">
                   <h2 className="cursive">{project.title}</h2>
                   <p>{project.description}</p>
@@ -55,7 +63,8 @@ const Cases = () => {
             </FadeIn>
           </Link>
         ))}
-        <div className="rounded-bottom col-12 m-0 p-0 position-relative align-items-center teaser
+        <div
+          className="rounded-bottom col-12 m-0 p-0 position-relative align-items-center teaser
           dark:border-borderColor border-darkBorder border border-l-0 border-r-0 border-b-0"
         >
           <p>Stay tuned for more...</p>

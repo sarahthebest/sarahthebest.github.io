@@ -8,7 +8,7 @@ const About = () => {
     seriesImg: series,
     seriesAlt: "House of the Dragon season 2",
     bookImg: book,
-    bookAlt: "Hyperion - Dan Simmons",
+    bookAlt: "Babel - R.F. Kuang",
   };
 
   const experiences = [
@@ -113,7 +113,7 @@ const About = () => {
           </div>
           <div className="experience flex flex-col gap-4">
           {experiences.map((experience, index) => (
-            <div key={index} className="flex  justify-between bg-white/20 p-4 rounded-lg">
+            <div key={index} className="flex  justify-between dark:bg-white/10 p-4 rounded-lg">
               <div className="">
                 <p className="font-bold">{experience.company}</p>
                 <p>{experience.role}</p>

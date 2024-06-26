@@ -148,7 +148,7 @@ const PortfolioCase = () => {
             </p>
             <img
               src="./img/gpt.webp"
-              className="w-3/6 mx-auto"
+              className="w-3/6"
               alt="Graphic of me asking chat gpt for help in my darkest hours and moments..."
             />
           </div>

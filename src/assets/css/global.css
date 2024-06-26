@@ -189,6 +189,10 @@
   font-family: "Archivo Regular", sans-serif;
   transition: background-color 0.1s linear;
 }
+.flex2:hover .linkIcon {
+  fill: #ff6040;
+}
+
 /* navbar */
 .navbar-links {
   width: fit-content;
