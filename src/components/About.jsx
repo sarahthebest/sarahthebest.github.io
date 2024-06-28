@@ -17,7 +17,7 @@ const About = () => {
       role: "Frontenddeveloper - Websecurity",
       date: "2023 Aug",
       endDate: "Present",
-      desc: "Advanced frontend development, React and styling libraries, Building secure websites."
+      desc: "Advanced frontend development, React and styling libraries, Building secure websites.",
     },
     {
       company: "North Kingdom",
@@ -106,25 +106,35 @@ const About = () => {
           />
         </div>
       </div>
-      <div className="container-lg mx-auto bg-customBGDark dark:bg-customBG p-4 mt-4 customBorder rounded">
-        <div className="timeline flex flex-row justify-between">
-          <div className="title">
-            <h4>My journey</h4>
+      <div className="container-lg mx-auto bg-customBGDark dark:bg-customBG mt-4 customBorder rounded">
+        <div className="timeline flex flex-col md:flex-row justify-between">
+          <div className="title m-4 mb-1">
+            <h4>Experience</h4>
           </div>
-          <div className="experience flex flex-col gap-4">
-          {experiences.map((experience, index) => (
-            <div key={index} className="flex  justify-between dark:bg-white/10 p-4 rounded-lg">
-              <div className="">
-                <p className="font-bold">{experience.company}</p>
-                <p>{experience.role}</p>
-                <p>{experience.desc}</p>
+          <div className="experience flex flex-col gap-4 p-4">
+            {experiences.map((experience, index) => (
+              <div
+                key={index}
+                className="flex  justify-between dark:bg-white/10 p-4 rounded-lg"
+              >
+                <div>
+                  <p className="font-bold">{experience.company}</p>
+                  <p>{experience.role}</p>
+                  <p className="text-wrap">{experience.desc}</p>
+                </div>
+                <div className="flex">
+                  <p
+                    className="
+                text-nowrap"
+                  >
+                    {experience.date} -{" "}
+                    <span className="p-2 text-indigo-100 bg-purple rounded-full hover:bg-orange hover:text-amber-200 duration-500 hover:transition-colors customBorder">
+                      {experience.endDate}
+                    </span>
+                  </p>
+                </div>
               </div>
-              <div className="flex"> 
-                <p>{experience.date} - <span className="p-2 text-indigo-100 bg-purple rounded-full hover:bg-orange hover:text-amber-200 duration-500 hover:transition-colors customBorder">{experience.endDate}</span></p>
-              </div>
-            </div>
-          ))}
-
+            ))}
           </div>
         </div>
       </div>
