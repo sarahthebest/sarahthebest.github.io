@@ -17,7 +17,7 @@ const About = () => {
       role: "Frontenddeveloper - Websecurity",
       date: "2023 Aug",
       endDate: "Present",
-      desc: "Advanced frontend development, React and styling libraries, Building secure websites.",
+      desc: "React, Styling libraries and Frameworks, Backend, Cybersecurity.",
     },
     {
       company: "North Kingdom",
