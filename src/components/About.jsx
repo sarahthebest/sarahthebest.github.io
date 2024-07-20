@@ -8,7 +8,7 @@ const About = () => {
     seriesImg: series,
     seriesAlt: "House of the Dragon season 2",
     bookImg: book,
-    bookAlt: "Babel - R.F. Kuang",
+    bookAlt: "The Fall of Hyperion - Dan Simmons",
   };
 
   const experiences = [
