@@ -4,6 +4,7 @@ import PortfolioCase from "./components/PortfolioCase";
 import ScrollToTop from "./components/ScrollToTop";
 import Velocity from "./components/Velocity";
 import Footer from "./components/common/Footer";
+import GradientBlur from "./components/common/GradientBlur";
 import Nav from "./components/common/Nav";
 
 import {
@@ -17,6 +18,7 @@ function App() {
     <>
       <BrowserRouter>
         <ScrollToTop />
+        <GradientBlur />
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
