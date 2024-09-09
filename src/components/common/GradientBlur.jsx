@@ -1,5 +1,5 @@
 const GradientBlur = () => {
-    return <div className="gradientBlur pointer-events-none overflow-hidden"/>;
+    return <div className="gradientBlur pointer-events-none"/>;
 };
 
 export default GradientBlur;

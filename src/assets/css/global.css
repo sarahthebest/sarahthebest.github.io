@@ -95,21 +95,22 @@
         margin-left: 15vw;
     }
 }
-.gradient-blur {
+.gradientBlur {
     position: fixed;
     z-index: 5;
     top: 0;
     left: 0;
     right: 0;
 }
+
 .gradientBlur::before {
     content: "";
     position: fixed;
     height: 180px;
-    top: -10;
+    top: 0; 
     left: 0;
     right: 0;
-    bottom: -20;
+    bottom: auto; 
     z-index: 4;
     backdrop-filter: blur(10px);
     mask-image: linear-gradient(
@@ -119,6 +120,7 @@
         rgba(0, 0, 0, 0) 100%
     );
 }
+
 
 .container-lg {
     max-width: 1140px;
