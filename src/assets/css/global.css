@@ -106,10 +106,10 @@
     content: "";
     position: fixed;
     height: 180px;
-    top: 0;
+    top: -10;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -20;
     z-index: 4;
     backdrop-filter: blur(10px);
     mask-image: linear-gradient(
