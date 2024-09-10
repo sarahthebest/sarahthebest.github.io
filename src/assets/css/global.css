@@ -106,7 +106,7 @@
 .gradientBlur::before {
     content: "";
     position: fixed;
-    height: 180px;
+    height: 150px;
     top: 0; 
     left: 0;
     right: 0;
