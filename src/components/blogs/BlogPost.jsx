@@ -40,6 +40,24 @@ const BlogPost = () => {
                     </div>
                     <p>{blog.intro}</p>
                     <p>{blog.text1}</p>
+                    {(blog.img1 || blog.img2) && (
+                        <div className="imgWrapper flex flex-row">
+                            {blog.img1 && (
+                                <img
+                                    src={blog.img1}
+                                    alt="Image 1"
+                                    className="w-1/2"
+                                />
+                            )}
+                            {blog.img2 && (
+                                <img
+                                    src={blog.img2}
+                                    alt="Image 2"
+                                    className="w-1/2"
+                                />
+                            )}
+                        </div>
+                    )}
                     <p>{blog.text2}</p>
                     <p>{blog.end}</p>
                 </div>
