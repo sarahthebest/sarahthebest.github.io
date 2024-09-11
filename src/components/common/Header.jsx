@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <div className="header w-full h-screen relative overflow-hidden">
       <BG />
-      <div className="headerBox flex flex-col mx-auto p-0 mt-10 items-center sm:items-start sm:w-5/6">
+      <div className="headerBox flex flex-col mx-auto p-0 mt-16 items-center sm:items-start sm:w-5/6">
         <div className="scroll flex flex-col items-center sm:items-start">
           <div className="flex mb-2 flex-row h-min">
             <p style={{ height: "30px" }}>
