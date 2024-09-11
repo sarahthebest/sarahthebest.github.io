@@ -107,10 +107,10 @@
     content: "";
     position: fixed;
     height: 180px;
-    top: 0; 
+    top: 0;
     left: 0;
     right: 0;
-    bottom: auto; 
+    bottom: auto;
     z-index: 4;
     backdrop-filter: blur(10px);
     mask-image: linear-gradient(
@@ -126,7 +126,6 @@
         rgba(0, 0, 0, 0) 100%
     );
 }
-
 
 .container-lg {
     max-width: 1140px;

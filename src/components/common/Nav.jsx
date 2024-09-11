@@ -15,6 +15,7 @@ const Nav = () => {
         { text: "Home", link: "/" },
         { text: "Github", link: "https://github.com/sarahthebest" },
         { text: "About Me", link: "/about" },
+        { text: "Blog", link: "/blog" },
         {
             text: "Linkedin",
             link: "https://www.linkedin.com/in/sarah-emmoth-696131206/",
