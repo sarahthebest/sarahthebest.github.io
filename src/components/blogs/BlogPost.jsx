@@ -31,7 +31,7 @@ const BlogPost = () => {
     return (
         <>
             <ProjectBG />
-            <main className="blog relative mt-20 p-4 px-6 md:px-10 pointer-events-auto flex flex-col gap-4 rounded mx-auto container-lg">
+            <main className="blog relative mt-20 px-4 lg:px-0 pointer-events-auto flex flex-col gap-4 rounded mx-auto container-lg">
                 <ReturnBtn />
                 <div className="blogPost flex gap-4 flex-col">
                     <div className="blogHeader flex items-center">
