@@ -3,208 +3,218 @@
 @tailwind utilities;
 
 :root {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* HEADER */
 
 #mountain {
-  filter: blur(1px);
+    filter: blur(1px);
 }
 
 .about-me {
-  grid-template-columns: 40% 60%;
-  grid-template-rows: repeat(auto-fit);
-  justify-content: center;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(auto-fit);
+    justify-content: center;
 }
 
 .wrappertitle {
-  max-width: fit-content;
-  top: 20vh;
-  z-index: 2;
-  grid-area: fun;
+    max-width: fit-content;
+    top: 20vh;
+    z-index: 2;
+    grid-area: fun;
 }
 
 #cardText {
-  font-size: 4rem;
+    font-size: 4rem;
 }
 
 .rect {
-  width: 350px;
-  min-height: 300px;
-  height: 300px;
-  border-radius: 0 80px 80px 80px;
+    width: 350px;
+    min-height: 300px;
+    height: 300px;
+    border-radius: 0 80px 80px 80px;
 }
 
 .cardHole {
-  width: 1vw;
-  height: 2vh;
-  z-index: 3;
+    width: 1vw;
+    height: 2vh;
+    z-index: 3;
 }
 
 #avatar {
-  width: 300px;
+    width: 300px;
 }
 
 .bento2 {
-  max-height: 300px;
+    max-height: 300px;
 }
 
 .bento3 {
-  max-height: 300px;
-  background-image: url(../img/flower.webp);
-  width: 100%;
-  background-size: cover;
-  background-position: bottom;
+    max-height: 300px;
+    background-image: url(../img/flower.webp);
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
 }
 
 .bento4 {
-  overflow-wrap: normal;
-  max-height: 300px;
+    overflow-wrap: normal;
+    max-height: 300px;
+    overflow: hidden;
+}
+.bentoCircle {
+    height: 180px;
+    width: 180px;
+    opacity: 70%;
+    z-index: 0;
+    filter: blur(40px);
+    border-radius: 100%;
+    animation: grow 6s infinite ease-in-out;
 }
 
 .onlineBar {
-  margin-left: 10px;
-  height: 30px;
-  width: 100px;
+    margin-left: 10px;
+    height: 30px;
+    width: 100px;
 }
 
 .greenCircle {
-  width: 15px;
-  height: 15px;
-  background-color: green;
+    width: 15px;
+    height: 15px;
+    background-color: green;
 }
 
 .onlineBar:hover > .greenCircle {
-  background-color: var(--orange);
+    background-color: var(--orange);
 }
 
 .onlineBar > p {
-  font-family: "Rainy Hearts";
+    font-family: "Rainy Hearts";
 }
 
 .onlineBar:hover > p {
-  color: var(--orange);
+    color: var(--orange);
 }
 
 .projects {
-  height: fit-content;
+    height: fit-content;
 }
 
 .case {
-  height: fit-content;
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  justify-content: center;
+    height: fit-content;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: center;
 }
 
 .list {
-  display: inline;
-  width: 80%;
+    display: inline;
+    width: 80%;
 }
 
 .right-box {
-  height: fit-content;
-  overflow: hidden;
-  align-self: center;
+    height: fit-content;
+    overflow: hidden;
+    align-self: center;
 }
 
 .tag {
-  font-family: "Rainy Hearts";
-  font-size: 1.5rem;
+    font-family: "Rainy Hearts";
+    font-size: 1.5rem;
 }
 
 .tag:hover {
-  color: var(--orange);
+    color: var(--orange);
 }
 
 .techLogo {
-  width: 50px;
+    width: 50px;
 }
 
 .tech {
-  width: 80px;
-  height: 80px;
-  font-size: 1.25rem;
-  display: inline-block;
+    width: 80px;
+    height: 80px;
+    font-size: 1.25rem;
+    display: inline-block;
 }
 
 .textDeco {
-  margin-left: 10vh;
+    margin-left: 10vh;
 }
 
 .textDecoLeft {
-  margin-right: 10vh;
+    margin-right: 10vh;
 }
 
 .flex2 {
-  border-left: 0;
-  border-right: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
 .flex3 {
-  border-bottom: 0;
-  border-left: 0;
-  border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
 .button {
-  font-size: 1rem;
-  text-decoration: none;
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 .proj {
-  height: 200px;
+    height: 200px;
 }
 
 .flex2:hover:before {
-  opacity: 0;
+    opacity: 0;
 }
 
 section {
-  height: fit-content;
-  margin-bottom: 60px;
+    height: fit-content;
+    margin-bottom: 60px;
 }
 
-.teaser{
-  height: 180px;
+.teaser {
+    height: 180px;
 }
 
 /* Scroller styling */
 .scroller {
-  height: 68px;
-  line-height: 4rem;
-  position: relative;
-  overflow: hidden;
-  border-left: 0 !important;
-  border-right: 0 !important;
+    height: 68px;
+    line-height: 4rem;
+    position: relative;
+    overflow: hidden;
+    border-left: 0 !important;
+    border-right: 0 !important;
 }
 
 .scroller > span {
-  position: absolute;
-  top: 0;
-  animation: slide 5s infinite;
-  font-size: 3rem;
-  cursor: default;
+    position: absolute;
+    top: 0;
+    animation: slide 5s infinite;
+    font-size: 3rem;
+    cursor: default;
 }
 
 @keyframes slide {
-  0% {
-    top: 0;
-  }
+    0% {
+        top: 0;
+    }
 
-  25% {
-    top: -4.2rem;
-  }
+    25% {
+        top: -4.2rem;
+    }
 
-  50% {
-    top: -8rem;
-  }
+    50% {
+        top: -8rem;
+    }
 
-  75% {
-    top: -12rem;
-  }
+    75% {
+        top: -12rem;
+    }
 }

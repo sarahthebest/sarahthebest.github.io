@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import BG from "./common/Bg";
 import series from "../assets/img/HOTD.webp";
-import book from "../assets/img/book.webp";
+import book from "../assets/img/book.jpg";
 
 const About = () => {
   const media = {
     seriesImg: series,
     seriesAlt: "House of the Dragon season 2",
     bookImg: book,
-    bookAlt: "The Fall of Hyperion - Dan Simmons",
+    bookAlt: "Endymion - Dan Simmons",
   };
 
   const experiences = [
