@@ -59,10 +59,51 @@
     background-position: bottom;
 }
 
+.progBlur {
+    width: 100%;
+    content: "";
+    filter: saturate(2);
+    height: 100%;
+    backdrop-filter: blur(10px);
+    mask-image: linear-gradient(
+        to top right,
+        rgb(255, 0, 0) 10%,
+        rgba(0, 0, 0, 1) 24%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to top right,
+        rgb(255, 0, 0) 10%,
+        rgba(0, 0, 0, 1) 24%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+.progBlurLeft {
+    width: 100%;
+    content: "";
+    filter: saturate(2);
+    height: 100%;
+    backdrop-filter: blur(20px);
+    mask-image: linear-gradient(
+        to top left,
+        rgb(255, 0, 0) 10%,
+        rgba(0, 0, 0, 1) 24%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to top left,
+        rgb(255, 0, 0) 10%,
+        rgba(0, 0, 0, 1) 24%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
 .bento4 {
-    overflow-wrap: normal;
     max-height: 300px;
-    overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    background-image: url(../img/bento4.jpg);
 }
 .bentoCircle {
     height: 180px;

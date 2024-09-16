@@ -107,7 +107,7 @@
     content: "";
     position: fixed;
     height: 150px;
-    top: 0; 
+    top: 0;
     left: 0;
     right: 0;
     bottom: auto;
@@ -255,7 +255,7 @@ footer {
     font-size: 2rem;
 }
 .chat:hover {
-    text-decoration: underline 1px var(--dark);
+    text-decoration: underline 1px var(--light);
 }
 
 /* About page */
@@ -275,9 +275,6 @@ body.darkMode .spanBorder:hover {
 body.darkMode .slick-arrow {
     filter: invert(0);
 }
-body.darkMode .chat:hover {
-    text-decoration: underline 2px var(--light);
-}
 body.darkMode .circle,
 body.darkMode .circle2,
 body.darkMode .circle3 {
@@ -293,10 +290,6 @@ body.darkMode .customBorder {
 }
 
 /* animations */
-
-.upArrow:hover {
-    transform: rotate(-20deg);
-}
 
 /* Skew */
 .hvr-skew {

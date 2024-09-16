@@ -4,6 +4,7 @@ import projectData from "../../assets/json/projects.json";
 import FadeIn from "../common/FadeIn";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import { GoArrowDown } from "react-icons/go";
 
 const Cases = () => {
   let projects = projectData.projects;
@@ -17,11 +18,7 @@ const Cases = () => {
       >
         <div className="projects text-center my-5">
           <h3 className="mb-3">What i've been up to</h3>
-          <img
-            className="dark:invert invert-0 img-fluid hvr-float"
-            src="./img/Arrow.webp"
-            alt="arrow pointing down."
-          />
+          <GoArrowDown className="mx-auto hvr-float" size={90}/>
         </div>
         {projects.map((project, index) => (
           <Link key={index} className="linkUnstyled" to={project.link}>
