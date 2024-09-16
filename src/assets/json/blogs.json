@@ -19,25 +19,6 @@
             "end": "I hope these pictures have lifted your spirits as much as they did mine.",
             "img1": "https://pbs.twimg.com/media/GXDO9TCXcAE5Z6t?format=jpg&name=large",
             "img2": "https://pbs.twimg.com/media/GXEicHKbEAMON5A.jpg"
-        },
-        {
-            "title": "GitHub roundup",
-            "link": "/github-roundup",
-            "date": "2024-09-11",
-            "intro": "Small GitHub projects!",
-            "text1": "I want to showcase two similar projects i've recently completed namely <a href='https://github.com/sarahthebest/drinkPedia'>DrinkPedia</a> , a app for finding cocktails. And ",
-            "text2": "In addition to project updates, I'll be sharing reflections on various topics related to design, technology, and anything else that interests me. Whether it's the latest trends in ux, emerging technologies, or cute animal pictures, I hope to provide some interesting and engaging content. This portfolio is my digital home and I hope you have fun exploring it. feel free to connect with me on LinkedIn or reach out over email",
-            "end": "Stay tuned for more blog posts. I won't be keeping to any set schedule but will aim to write whenever I discover something new, interesting, or complete a new project. Thank you for taking the time to read my first blog post. Make sure to watch this space 😎"
-        },
-        {
-            "title": "The Toolbox",
-            "link": "/the-toolbox",
-            "date": "2024-09-11",
-            "intro": "Heres a list of both software and hardware I use (almost) daily as a fulltime student.",
-            "text1": "",
-            "list1": "Brave Browser, VS Code, Git Bash",
-            "text2": "",
-            "end": "I hope these pictures have lifted your spirits as much as they did mine."
         }
     ]
 }

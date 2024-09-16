@@ -1,21 +1,6 @@
 {
     "projects": [
         {
-            "title": "ChatBotico",
-            "thumbnail": "./img/thumbnails/portfolio.webp",
-            "imgAlt": "A scrolling screenshot of my old portfolio",
-            "link": "/portfolioCase",
-            "description": "Building a private messaging app.",
-            "tags": [
-                "Frontend",
-                "Security"
-            ],
-            "date": "2024 May - 2024 Aug",
-            "background": "Fall 2023 I enrolled in a two-year frontend program and in preparation for my internship period in fall 2024, I wanted to revamp my old portfolio. What better way to demonstrate my skills than by taking on the challenge of building something meaningful myself?",
-            "mission": "Redesign my portfolio to reflect my personal style and use new technologies. This isn't a formal case study but more of a personal blog post. No exhaustive research, just a passionate endeavor to create an online space to showcase myself and my progress.",
-            "note": "As of 22/05/2024, I redid my portfolio AGAIN! in React with the aim of getting better at React and making my portfolio smoother. This 'case study' remains as is."
-        },
-        {
             "title": "Portfolio Redesign",
             "thumbnail": "./img/thumbnails/portfolio.webp",
             "imgAlt": "A scrolling screenshot of my old portfolio",
