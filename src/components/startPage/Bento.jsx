@@ -29,7 +29,7 @@ const Bento = () => {
                     />
                 </div>
                 <div className="bento3 col-span-2 rounded relative overflow-hidden">
-                <p className="text-1xl text-white tracking-widest absolute bottom-0 left-0 cursive p-4 z-10">
+                <p className="text-1xl text-white tracking-widest absolute bottom-0 left-0 cursive p-4 z-3">
                         Strömbron
                         <br />
                         Stockholms län
@@ -39,7 +39,7 @@ const Bento = () => {
                     <div className="progBlur absolute bg-gradient-to-tr from-purple/50 to-indigo-900/100"></div>
                 </div>
                 <div className="bento4 relative rounded col-span-4 sm:col-span-2 justify-end">
-                    <p className="text-1xl text-white tracking-widest absolute bottom-0 right-0 text-end cursive p-4 z-10">
+                    <p className="text-1xl text-white tracking-widest absolute bottom-0 right-0 text-end cursive p-4 z-3">
                         Sofiero Slott
                         <br />
                         Skåne Landskap
