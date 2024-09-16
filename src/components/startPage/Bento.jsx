@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 const Bento = () => {
     return (
         <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG">
@@ -23,7 +24,7 @@ const Bento = () => {
                 <div className="bento2 col-span-2 sm:col-span-1 rounded overflow-hidden">
                     <img
                         className="selfie w-full h-full object-cover"
-                        src="./img/selfie.jpg"
+                        src="./img/selfie.webp"
                         alt="Selfie"
                     />
                 </div>

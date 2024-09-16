@@ -19,6 +19,17 @@
             "end": "I hope these pictures have lifted your spirits as much as they did mine.",
             "img1": "https://pbs.twimg.com/media/GXDO9TCXcAE5Z6t?format=jpg&name=large",
             "img2": "https://pbs.twimg.com/media/GXEicHKbEAMON5A.jpg"
+        },
+        {
+            "title": "Recipes and Cocktails",
+            "link": "/recipes-and-cocktails",
+            "date": "2024-09-16",
+            "intro": "In this post, I want to showcase two recent projects that I've completed: DrinkPedia, an app that fetches cocktails from TheCockTailDB, and Recipefetcher, a simple app that fetches recipes from TheMealDB",
+            "text1": "RecipeFetcher was a school assignment I completed in March of this year. Built using TheMealDB API and Material UI, it was one of the first React web applications I created. The goal was to design a user-friendly app where users can search for recipes and filter by categories, making meal planning much easier. The experience taught me the fundamentals of API integration, state management, and responsive UI design. It was an eye-opening introduction to the power of React and Material UI, both of which I continue to use in my development workflow today.",
+            "text2": "DrinkPedia, on the other hand, was a personal project I took on in July. I wanted to build something fun while also leveling up my skills. DrinkPedia fetches data from TheCocktailDB and was built using Chakra UI, a React component library that I found to be more flexible for custom UI needs. This project was a significant milestone for me because I was able to apply everything I had learned from RecipeFetcher while also experimenting with the design much more.",
+            "end": "It’s been rewarding to see how far I’ve come in such a short time, from working on a school project to building something entirely on my own. With RecipeFetcher, I focused heavily on following best practices and following the assignment. But with DrinkPedia, I had more freedom to design and architect the application the way I wanted. Both projects can be found on my GitHub link in nav.",
+            "img1":"https://raw.githubusercontent.com/sarahthebest/Recipefetcher/main/thumbnail.png",
+            "img2":"/img/drinkPediaPreview.gif"
         }
     ]
 }

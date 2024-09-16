@@ -31,7 +31,7 @@ const BlogPost = () => {
     return (
         <>
             <ProjectBG />
-            <main className="blog relative mt-20 px-2 md:px-4 lg:px-6 pointer-events-auto flex flex-col gap-4 rounded mx-auto container-lg">
+            <main className="blog relative mt-20 px-6 lg:px-0 pointer-events-auto flex flex-col gap-4 rounded mx-auto container-lg">
                 <ReturnBtn />
                 <div className="blogPost flex gap-4 flex-col">
                     <div className="blogHeader flex items-center">
@@ -40,6 +40,7 @@ const BlogPost = () => {
                     </div>
                     <p>{blog.intro}</p>
                     <p>{blog.text1}</p>
+                    <p>{blog.text2}</p>
                     {(blog.img1 || blog.img2) && (
                         <div className="imgWrapper flex flex-row">
                             {blog.img1 && (
@@ -58,7 +59,6 @@ const BlogPost = () => {
                             )}
                         </div>
                     )}
-                    <p>{blog.text2}</p>
                     <p>{blog.end}</p>
                 </div>
             </main>

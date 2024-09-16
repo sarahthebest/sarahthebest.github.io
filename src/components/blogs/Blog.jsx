@@ -4,7 +4,6 @@ import data from "../../assets/json/blogs.json";
 
 const Blog = () => {
     const blogs = data.blogs;
-    console.log(blogs[0].link);
 
     return (
         <>

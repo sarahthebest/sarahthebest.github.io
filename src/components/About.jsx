@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import BG from "./common/Bg";
 import series from "../assets/img/HOTD.webp";
-import book from "../assets/img/book.jpg";
+import book from "../assets/img/book.webp";
 
 const About = () => {
     const media = {
