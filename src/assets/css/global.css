@@ -255,11 +255,7 @@ footer {
     height: 20px;
 }
 .chat {
-    text-decoration: none;
     font-size: 2rem;
-}
-.chat:hover {
-    text-decoration: underline 1px var(--light);
 }
 
 /* About page */

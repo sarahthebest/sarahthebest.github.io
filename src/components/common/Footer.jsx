@@ -8,7 +8,7 @@ const Footer = () => {
             <h2 style={{fontSize: '2.5rem'}} className="headline">Want to chat?</h2>
             <div className="flex flex-row justify-content-between">
             <a
-              className="cursive chat flex flex-row items-center gap-1"
+              className="cursive chat flex flex-row items-center gap-1 hover:underline"
               href="mailto:sarah.emmoth@gmail.com"
             >
               Get in touch! <GoArrowDownLeft />
