@@ -35,7 +35,7 @@ const Bento = () => {
                         <br />
                         Stockholms Kommun
                     </p>
-                    <div className="progBlur absolute bg-gradient-to-tr from-purple/20 to-indigo-900/100"></div>
+                    <div className="progBlur absolute bg-gradient-to-tr from-purple/50 to-indigo-900/100"></div>
                 </div>
                 <div className="bento4 relative rounded col-span-4 sm:col-span-2 justify-end">
                     <p className="text-1xl text-white tracking-widest absolute bottom-0 right-0 text-end cursive p-4 z-10">
@@ -47,7 +47,7 @@ const Bento = () => {
                     </p>
                     <div
                         className="progBlurLeft rounded absolute top-0 bg-gradient-to-tl 
-                    from-green/20 to-green-900/100 z-0"
+                    from-rose-300/50 to-rose-600/100 z-0"
                     ></div>
                 </div>
             </div>

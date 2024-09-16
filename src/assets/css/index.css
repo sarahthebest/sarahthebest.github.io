@@ -81,7 +81,6 @@
 .progBlurLeft {
     width: 100%;
     content: "";
-    filter: saturate(2);
     height: 100%;
     backdrop-filter: blur(20px);
     mask-image: linear-gradient(
