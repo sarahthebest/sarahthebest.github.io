@@ -1,14 +1,14 @@
 import { Link, Outlet } from "react-router-dom";
-import BG from "../common/Bg";
 import data from "../../assets/json/blogs.json";
+import ProjectBG from "../projectPages/ProjectBG";
 
 const Blog = () => {
     const blogs = data.blogs;
 
     return (
         <>
-            <BG />
-            <main className="blog p-20 px-4 md:px-20 pointer-events-auto flex flex-col gap-4 mt-10 rounded customBorder bg-customBGDark dark:bg-customBG mx-auto container-lg">
+            <ProjectBG />
+            <main className="blog mt-32 px-6 lg:px-0  pointer-events-auto flex flex-col gap-4 rounded mx-auto container-lg">
                 <section className="blogIntro flex flex-row justify-between">
                     <h1>Writing</h1>
                     <p className="w-1/2 md:w-1/3">

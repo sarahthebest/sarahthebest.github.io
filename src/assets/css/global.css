@@ -127,7 +127,7 @@
     );
 }
 
-.z-3{
+.z-3 {
     z-index: 3;
 }
 
@@ -250,6 +250,7 @@ footer {
     height: 220px;
     margin-top: auto;
 }
+
 .footerArrow {
     width: 20px;
     height: 20px;
