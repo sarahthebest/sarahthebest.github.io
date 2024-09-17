@@ -265,6 +265,10 @@ footer {
     height: 300px;
 }
 
+.text-blur{
+    backdrop-filter: blur(2px);
+}
+
 /* darkmode */
 
 body.darkMode .spanBorder {
