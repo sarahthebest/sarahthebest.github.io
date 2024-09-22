@@ -2,6 +2,7 @@
 import BG from "./common/Bg";
 import series from "../assets/img/HOTD.webp";
 import book from "../assets/img/book.webp";
+import { GiPotionBall } from "react-icons/gi";
 
 const About = () => {
     const media = {
@@ -118,13 +119,13 @@ const About = () => {
             <div className="container-lg mx-auto bg-customBGDark dark:bg-customBG mt-4 customBorder rounded">
                 <div className="timeline flex flex-col md:flex-row justify-between">
                     <div className="title m-4 mb-1">
-                        <h4>Experience</h4>
+                        <h4 className="flex flex-row place-items-center gap-2"> <GiPotionBall />Experience</h4>
                     </div>
-                    <div className="experience flex flex-col gap-4 p-4">
+                    <div className="experience flex flex-col p-6 gap-10">
                         {experiences.map((experience, index) => (
                             <div
                                 key={index}
-                                className="flex  justify-between dark:bg-white/10 p-4 rounded-lg"
+                                className="flex justify-between rounded-t-lg"
                             >
                                 <div>
                                     <p className="font-bold">
@@ -136,10 +137,7 @@ const About = () => {
                                     </p>
                                 </div>
                                 <div className="flex">
-                                    <p
-                                        className="
-                text-nowrap"
-                                    >
+                                    <p className="text-nowrap">
                                         {experience.date} -{" "}
                                         <span className="p-2 text-indigo-100 bg-purple rounded-full hover:bg-orange hover:text-amber-200 duration-500 hover:transition-colors customBorder">
                                             {experience.endDate}

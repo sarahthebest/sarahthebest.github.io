@@ -29,7 +29,7 @@ const Toolbox = () => {
   return (
     <article 
     className="text-center relative bg-customBGDark dark:bg-customBG customBorder
-     rounded container-lg mx-auto p-0 flex-col flex">
+     rounded container-lg mx-auto p-0 flex-col flex cursor-default">
       <h3 className="w-full my-4">My toolbox</h3>
       <FadeIn selector="about-me w-full fade-in-section flex flex-col sm:grid p-10
        dark:border-borderColor border-darkBorder border border-l-0 border-r-0">
@@ -49,14 +49,14 @@ const Toolbox = () => {
           data-aos="fade-right"
           data-aos-once="true"
           data-aos-delay="10"
-          className="right-box align-items-center"
+          className="right-box align-items-center overflow-vsb"
         >
           <ul
-            className="flex-row flex flex-wrap place-content-center"
+            className="flex-row flex flex-wrap gap-2 place-content-center"
             style={{ maxWidth: "400px" }}
           >
             {frontend.map((item, index) => (
-              <li key={index} className="tech bg-light/50 rounded m-1 flex align-items-center customBorder">
+              <li key={index} className="tech bg-light/50 hvr-float rounded m-1 flex align-items-center customBorder">
                 <img
                   className="techLogo"
                   src={item.img}
@@ -85,11 +85,11 @@ const Toolbox = () => {
           data-aos="fade-right"
           data-aos-once="true"
           data-aos-delay="10"
-          className="right-box mx-auto"
+          className="right-box mx-auto overflow-vsb"
         >
-          <ul className="flex-row flex flex-wrap place-content-center sm:px-10">
+          <ul className="flex-row gap-2 flex flex-wrap place-content-center sm:px-10">
             {ux.map((item, index) => (
-              <li key={index} className="tag spanBorder m-1 rounded p-2">
+              <li key={index} className="tag hvr-float hv spanBorder m-1 rounded p-2">
                 {item.text}
               </li>
             ))}

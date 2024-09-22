@@ -64,7 +64,7 @@
     content: "";
     filter: saturate(2);
     height: 100%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
     mask-image: linear-gradient(
         to top right,
         rgb(255, 0, 0) 10%,
@@ -82,16 +82,16 @@
     width: 100%;
     content: "";
     height: 100%;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(4px);
     mask-image: linear-gradient(
         to top left,
-        rgb(255, 0, 0) 10%,
-        rgba(0, 0, 0, 1) 24%,
-        rgba(0, 0, 0, 0) 100%
+        rgb(255, 255, 255) 10%,
+        rgb(255, 255, 255) 24%,
+        rgba(255, 255, 255, 0) 100%
     );
     -webkit-mask-image: linear-gradient(
         to top left,
-        rgb(255, 0, 0) 10%,
+        rgb(255, 255, 255) 10%,
         rgba(0, 0, 0, 1) 24%,
         rgba(0, 0, 0, 0) 100%
     );

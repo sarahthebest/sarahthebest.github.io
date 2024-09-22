@@ -94,7 +94,9 @@
         height: 400px;
         margin-left: 15vw;
     }
+
 }
+
 .gradientBlur {
     position: fixed;
     z-index: 5;
@@ -133,6 +135,10 @@
 
 .container-lg {
     max-width: 1140px;
+}
+
+.overflow-vsb {
+    overflow: visible;
 }
 
 #headerBG {
@@ -265,7 +271,7 @@ footer {
     height: 300px;
 }
 
-.text-blur{
+.text-blur {
     backdrop-filter: blur(2px);
 }
 
@@ -316,7 +322,6 @@ body.darkMode .customBorder {
 }
 /* float */
 .hvr-float {
-    display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
