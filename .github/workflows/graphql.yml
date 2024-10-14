@@ -10,30 +10,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        ref: main  
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: main  
 
-    - name: GraphQL request to fetch contributions
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: |
-        query='
-        {
-          viewer {
-            repositories(first: 100) {
-              edges {
-                node {
-                  name
-                  defaultBranchRef {
-                    target {
-                      ... on Commit {
-                        history(first: 1) {
-                          edges {
-                            node {
-                              messageHeadline
-                              committedDate
+      - name: GraphQL request to fetch contributions
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          query='
+          {
+            viewer {
+              repositories(first: 100) {
+                edges {
+                  node {
+                    name
+                    defaultBranchRef {
+                      target {
+                        ... on Commit {
+                          history(first: 1) {
+                            edges {
+                              node {
+                                messageHeadline
+                                committedDate
+                              }
                             }
                           }
                         }
@@ -44,43 +45,51 @@ jobs:
               }
             }
           }
-        }
-        '
+          '
 
-        response=$(curl -X POST \
-          -H "Authorization: bearer $GH_TOKEN" \
-          -H "Content-Type: application/json" \
-          -d '{"query":"'"$query"'"}' \
-          https://api.github.com/graphql)
+          response=$(curl -X POST \
+            -H "Authorization: bearer '$GH_TOKEN'" \
+            -H "Content-Type: application/json" \
+            -d '{"query":"'"$query"'"}' \
+            https://api.github.com/graphql)
 
-        latest_commit_date=""
-        latest_commit_message=""
-        
-        for repo in $(echo "$response" | jq -c '.data.viewer.repositories.edges[]'); do
-          repo_name=$(echo "$repo" | jq -r '.node.name')
-          commit_date=$(echo "$repo" | jq -r '.node.defaultBranchRef.target.history.edges[0].node.committedDate // empty')
-          commit_message=$(echo "$repo" | jq -r '.node.defaultBranchRef.target.history.edges[0].node.messageHeadline // empty')
+          echo "Response: $response" 
+          echo "Parsed response: $(echo "$response" | jq '.data.viewer.repositories.edges[] | {name: .node.name, message: .node.defaultBranchRef.target.history.edges[0].node.messageHeadline, date: .node.defaultBranchRef.target.history.edges[0].node.committedDate}')"  # Debug the parsed data
 
-          if [[ -n "$commit_date" ]]; then
-            if [[ -z "$latest_commit_date" || "$commit_date" > "$latest_commit_date" ]]; then
-              latest_commit_date="$commit_date"
-              latest_commit_message="$commit_message"
-            fi
+          
+
+          if [[ $(echo "$response" | jq -r '.errors') != "null" ]]; then
+            echo "GraphQL errors: $(echo "$response" | jq -r '.errors')"
+            exit 1  
           fi
-        done
 
-        echo "Latest commit message: $latest_commit_message"
-        echo "Latest commit date: $latest_commit_date"
+          latest_commit_repository=""
+          latest_commit_message=""
+          latest_commit_date=""
 
-        echo "{\"latest_commit\": {\"message\": \"$latest_commit_message\", \"date\": \"$latest_commit_date\"}}" > contributions.json
+          for repo in $(echo "$response" | jq -c '.data.viewer.repositories.edges[]'); do
+            repo_name=$(echo "$repo" | jq -r '.node.name')
+            commit_date=$(echo "$repo" | jq -r '.node.defaultBranchRef.target.history.edges[0].node.committedDate // empty')
+            commit_message=$(echo "$repo" | jq -r '.node.defaultBranchRef.target.history.edges[0].node.messageHeadline // empty')
 
-    - name: Configure Git user
-      run: |
-        git config --global user.name 'sarahthebest'
-        git config --global user.email 'sarah.emmoth@gmail.com'
+            if [[ -n "$commit_date" ]]; then
+              if [[ -z "$latest_commit_date" || "$commit_date" > "$latest_commit_date" ]]; then
+                latest_commit_date="$commit_date"
+                latest_commit_message="$commit_message"
+                latest_commit_repository="$repo_name"
+              fi
+            fi
+          done
 
-    - name: Commit and Push to GitHub Pages branch
-      run: |
-        git add contributions.json
-        git commit -m "Update contributions data" || echo "No changes to commit"
-        git push origin main
+          echo "{\"latest_commit\": {\"repository\": \"$latest_commit_repository\", \"message\": \"$latest_commit_message\", \"date\": \"$latest_commit_date\"}}" > src/assets/json/contributions.json
+
+      - name: Configure Git user
+        run: |
+          git config --global user.name 'sarahthebest'
+          git config --global user.email 'sarah.emmoth@proton.me'
+
+      - name: Commit and Push to GitHub Pages branch
+        run: |
+          git add src/assets/json/contributions.json
+          git commit -m "Update contributions data" || echo "No changes to commit"
+          git push origin main
