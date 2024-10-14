@@ -54,6 +54,9 @@ jobs:
             https://api.github.com/graphql)
 
           echo "Response: $response" 
+          echo "Parsed response: $(echo "$response" | jq '.data.viewer.repositories.edges[] | {name: .node.name, message: .node.defaultBranchRef.target.history.edges[0].node.messageHeadline, date: .node.defaultBranchRef.target.history.edges[0].node.committedDate}')"  # Debug the parsed data
+
+          
 
           if [[ $(echo "$response" | jq -r '.errors') != "null" ]]; then
             echo "GraphQL errors: $(echo "$response" | jq -r '.errors')"
