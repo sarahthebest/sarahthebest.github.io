@@ -48,7 +48,7 @@ jobs:
           '
 
           response=$(curl -X POST \
-            -H "Authorization: bearer $GH_TOKEN" \
+            -H "Authorization: bearer '$GH_TOKEN'" \ 
             -H "Content-Type: application/json" \
             -d '{"query":"'"$query"'"}' \
             https://api.github.com/graphql)
@@ -86,7 +86,7 @@ jobs:
       - name: Configure Git user
         run: |
           git config --global user.name 'sarahthebest'
-          git config --global user.email 'sarah.emmoth@gmail.com'
+          git config --global user.email 'sarah.emmoth@proton.me'
 
       - name: Commit and Push to GitHub Pages branch
         run: |
