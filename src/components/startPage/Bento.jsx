@@ -1,5 +1,29 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useState, useEffect } from "react";
+
 const Bento = () => {
+    const [latestCommit, setLatestCommit] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        async function fetchContributionsFromAPI() {
+            try {
+                const response = await fetch(
+                    "src/assets/json/contributions.json"
+                );
+                const result = await response.json();
+                const latestCommit = result.latest_commit; // Assuming this matches your JSON structure
+                setLatestCommit(latestCommit);
+            } catch (error) {
+                console.error("Failed to fetch contributions:", error);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        fetchContributionsFromAPI();
+    }, []);
+
     return (
         <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG">
             <div className="p-4 h-fit grid grid-cols-4 grid-rows-3 sm:grid-rows-2 gap-4 rounded customBorder my">
@@ -29,16 +53,6 @@ const Bento = () => {
                     />
                 </div>
                 <div className="bento3 col-span-2 rounded relative overflow-hidden">
-                <p className="text-1xl text-white tracking-widest absolute bottom-0 left-0 cursive p-4 z-3">
-                        Strömbron
-                        <br />
-                        Stockholms län
-                        <br />
-                        Stockholms Kommun
-                    </p>
-                    <div className="progBlur absolute bg-gradient-to-tr from-purple/10 to-indigo-900/100"></div>
-                </div>
-                <div className="bento4 relative rounded col-span-4 sm:col-span-2 justify-end">
                     <p className="text-1xl text-white tracking-widest absolute bottom-0 right-0 text-end cursive p-4 z-3">
                         Sofiero Slott
                         <br />
@@ -46,10 +60,26 @@ const Bento = () => {
                         <br />
                         Hälsingborg Kommun
                     </p>
-                    <div
-                        className="progBlurLeft rounded absolute top-0 bg-gradient-to-bl 
-                    from-rose-300/10 to-rose-900/100"
-                    ></div>
+                    <div className="progBlurLeft rounded absolute top-0"></div>
+                </div>
+                <div className="bento4 relative rounded p-4 col-span-4 sm:col-span-2 overflow-hidden">
+                    {loading ? (
+                        <p>Loading GitHub contributions...</p>
+                    ) : latestCommit ? (
+                        <div className="relative z-10 flex flex-col gap-6">
+                            <p>
+                                Latest GitHub commit in 
+                                <span className="font-bold"> {latestCommit.repository}</span>:
+                                <br />
+                                <span className="text-3xl">{latestCommit.message}</span>
+                            </p>
+                            <p>
+                                Committed on: <span>{new Date(latestCommit.date).toLocaleString()}</span>
+                            </p>
+                        </div>
+                    ) : (
+                        <p>No contributions found.</p>
+                    )}
                 </div>
             </div>
         </section>
