@@ -17,7 +17,7 @@ jobs:
 
       - name: GraphQL request to fetch contributions
         env:
-          GH_TOKEN: ${{secrets.GH_TOKEN}}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           query='
           {
@@ -48,9 +48,11 @@ jobs:
           '
 
           response=$(curl -X POST \
-            -H "Authorization: bearer '$GH_TOKEN'" \
+            -H "Authorization: bearer $GH_TOKEN" \
             -H "Content-Type: application/json" \
-            -d '{"query":"'"$query"'"}' \
+            -d '{
+              "query": "'"${query}"'"
+            }' \
             https://api.github.com/graphql)
 
           echo "Response: $response" 
