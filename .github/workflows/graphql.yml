@@ -47,12 +47,38 @@ jobs:
           }
           '
 
+          echo "Query: $query"
+
           response=$(curl -X POST \
             -H "Authorization: bearer $GH_TOKEN" \
             -H "Content-Type: application/json" \
-            -d '{
-              "query": "'"${query}"'"
-            }' \
+           -d '{
+            "query": "{
+              viewer {
+                repositories(first: 100) {
+                  edges {
+                    node {
+                      name
+                        defaultBranchRef {
+                          target {
+                            ... on Commit {
+                              history(first: 1) {
+                              edges {
+                                node {
+                                  messageHeadline
+                                  committedDate
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }"
+          }' \
             https://api.github.com/graphql)
 
           echo "Response: $response" 
