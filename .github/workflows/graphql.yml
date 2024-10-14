@@ -21,19 +21,21 @@ jobs:
       run: |
         query='
         {
-          user(login: "sarahthebest") {
-            contributionsCollection(from: "'$(date -u +%Y-01-01T00:00:00Z)'", to: "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'") {
-              totalCommitContributions
-            }
-            repository(name: "fwk-23-4-frontend") {
-              defaultBranchRef {
-                target {
-                  ... on Commit {
-                    history(first: 1) {
-                      edges {
-                        node {
-                          messageHeadline
-                          committedDate
+          viewer {
+            repositories(first: 100) {
+              edges {
+                node {
+                  name
+                  defaultBranchRef {
+                    target {
+                      ... on Commit {
+                        history(first: 1) {
+                          edges {
+                            node {
+                              messageHeadline
+                              committedDate
+                            }
+                          }
                         }
                       }
                     }
@@ -51,7 +53,26 @@ jobs:
           -d '{"query":"'"$query"'"}' \
           https://api.github.com/graphql)
 
-        echo "$response" > contributions.json
+        latest_commit_date=""
+        latest_commit_message=""
+        
+        for repo in $(echo "$response" | jq -c '.data.viewer.repositories.edges[]'); do
+          repo_name=$(echo "$repo" | jq -r '.node.name')
+          commit_date=$(echo "$repo" | jq -r '.node.defaultBranchRef.target.history.edges[0].node.committedDate // empty')
+          commit_message=$(echo "$repo" | jq -r '.node.defaultBranchRef.target.history.edges[0].node.messageHeadline // empty')
+
+          if [[ -n "$commit_date" ]]; then
+            if [[ -z "$latest_commit_date" || "$commit_date" > "$latest_commit_date" ]]; then
+              latest_commit_date="$commit_date"
+              latest_commit_message="$commit_message"
+            fi
+          fi
+        done
+
+        echo "Latest commit message: $latest_commit_message"
+        echo "Latest commit date: $latest_commit_date"
+
+        echo "{\"latest_commit\": {\"message\": \"$latest_commit_message\", \"date\": \"$latest_commit_date\"}}" > contributions.json
 
     - name: Configure Git user
       run: |
@@ -61,5 +82,5 @@ jobs:
     - name: Commit and Push to GitHub Pages branch
       run: |
         git add contributions.json
-        git commit -m "Update contributions data"
-        git push origin main 
+        git commit -m "Update contributions data" || echo "No changes to commit"
+        git push origin main
