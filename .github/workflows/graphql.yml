@@ -13,7 +13,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
-        ref: gh-pages 
+        ref: main  
 
     - name: GraphQL request to fetch contributions
       env:
@@ -62,4 +62,4 @@ jobs:
       run: |
         git add contributions.json
         git commit -m "Update contributions data"
-        git push origin gh-pages
+        git push origin main 
