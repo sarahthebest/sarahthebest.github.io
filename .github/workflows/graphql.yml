@@ -1,0 +1,65 @@
+name: Fetch GitHub Contributions
+
+on:
+  workflow_dispatch: 
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  fetch_contributions:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        ref: gh-pages 
+
+    - name: GraphQL request to fetch contributions
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        query='
+        {
+          user(login: "sarahthebest") {
+            contributionsCollection(from: "'$(date -u +%Y-01-01T00:00:00Z)'", to: "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'") {
+              totalCommitContributions
+            }
+            repository(name: "sarahthebest.github.io") {
+              defaultBranchRef {
+                target {
+                  ... on Commit {
+                    history(first: 1) {
+                      edges {
+                        node {
+                          messageHeadline
+                          committedDate
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        '
+
+        response=$(curl -X POST \
+          -H "Authorization: bearer $GH_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{"query":"'"$query"'"}' \
+          https://api.github.com/graphql)
+
+        echo "$response" > contributions.json
+
+    - name: Configure Git user
+      run: |
+        git config --global user.name 'sarahthebest'
+        git config --global user.email 'sarah.emmoth@gmail.com'
+
+    - name: Commit and Push to GitHub Pages branch
+      run: |
+        git add contributions.json
+        git commit -m "Update contributions data"
+        git push origin gh-pages
