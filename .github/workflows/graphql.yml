@@ -19,7 +19,32 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          query="query { viewer { repositories(first: 100) { edges { node { name defaultBranchRef { target { ... on Commit { history(first: 1) { edges { node { messageHeadline committedDate } } } } } } } } } } }"
+           query
+            {
+              viewer {
+                repositories(first: 100) {
+                  edges {
+                    node {
+                      name
+                      defaultBranchRef {
+                        target {
+                          ... on Commit {
+                            history(first: 1) {
+                              edges {
+                                node {
+                                  messageHeadline
+                                  committedDate
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
 
           echo "Query: $query"
 
