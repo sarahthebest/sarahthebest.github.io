@@ -52,39 +52,12 @@ jobs:
           response=$(curl -X POST \
             -H "Authorization: bearer $GH_TOKEN" \
             -H "Content-Type: application/json" \
-           -d '{
-            "query": "{
-              viewer {
-                repositories(first: 100) {
-                  edges {
-                    node {
-                      name
-                        defaultBranchRef {
-                          target {
-                            ... on Commit {
-                              history(first: 1) {
-                              edges {
-                                node {
-                                  messageHeadline
-                                  committedDate
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }"
-          }' \
+            -d '{
+              "query": "'"$(echo "$query" | jq -sR .)"'"
+            }' \
             https://api.github.com/graphql)
 
           echo "Response: $response" 
-          echo "Parsed response: $(echo "$response" | jq '.data.viewer.repositories.edges[] | {name: .node.name, message: .node.defaultBranchRef.target.history.edges[0].node.messageHeadline, date: .node.defaultBranchRef.target.history.edges[0].node.committedDate}')"  # Debug the parsed data
-
-          echo $GH_TOKEN
 
           if [[ $(echo "$response" | jq -r '.errors') != "null" ]]; then
             echo "GraphQL errors: $(echo "$response" | jq -r '.errors')"
