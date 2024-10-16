@@ -1,4 +1,4 @@
-name: Fetch GitHub Contributions
+name: Fetch GitHub Contributions REST
 
 on:
   workflow_dispatch: 
@@ -15,67 +15,29 @@ jobs:
         with:
           ref: main  
 
-      - name: GraphQL request to fetch contributions
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Fetch latest commit with REST API
         run: |
-          query='{
-            viewer {
-              repositories(first: 100) {
-                edges {
-                  node {
-                    name
-                    defaultBranchRef {
-                      target {
-                        ... on Commit {
-                          history(first: 1) {
-                            edges {
-                              node {
-                                messageHeadline
-                                committedDate
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }'
-
-          echo "Query: $query"
-
-          response=$(curl -X POST \
-            -H "Authorization: bearer $GH_TOKEN" \
-            -H "Content-Type: text/yaml" \
-            -d '{
-              "query": "'"$(echo "$query" | jq -sR .)"'"
-            }' \
-            https://api.github.com/graphql)
-
-          echo "Response: $response" 
-
-          if [[ $(echo "$response" | jq -r '.errors') != "null" ]]; then
-            echo "GraphQL errors: $(echo "$response" | jq -r '.errors')"
-            exit 1  
-          fi
+          repos=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+          "https://api.github.com/users/sarahthebest/repos?per_page=100" | jq -r '.[].name')
 
           latest_commit_repository=""
           latest_commit_message=""
           latest_commit_date=""
 
-          for repo in $(echo "$response" | jq -c '.data.viewer.repositories.edges[]'); do
-            repo_name=$(echo "$repo" | jq -r '.node.name')
-            commit_date=$(echo "$repo" | jq -r '.node.defaultBranchRef.target.history.edges[0].node.committedDate // empty')
-            commit_message=$(echo "$repo" | jq -r '.node.defaultBranchRef.target.history.edges[0].node.messageHeadline // empty')
+          for repo in $repos; do
+            echo "Checking latest commit in repository: $repo"
+
+            commit=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+            "https://api.github.com/repos/sarahthebest/$repo/commits?per_page=1" | jq -r '.[0]')
+
+            commit_message=$(echo "$commit" | jq -r '.commit.message')
+            commit_date=$(echo "$commit" | jq -r '.commit.committer.date')
 
             if [[ -n "$commit_date" ]]; then
               if [[ -z "$latest_commit_date" || "$commit_date" > "$latest_commit_date" ]]; then
                 latest_commit_date="$commit_date"
                 latest_commit_message="$commit_message"
-                latest_commit_repository="$repo_name"
+                latest_commit_repository="$repo"
               fi
             fi
           done
