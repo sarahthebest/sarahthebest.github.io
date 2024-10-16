@@ -1,31 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState, useEffect } from "react";
+import commit from "../../assets/json/gh_data.json";
+import "./startPage.css";
 
 const Bento = () => {
-    const [latestCommit, setLatestCommit] = useState(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        async function fetchContributionsFromAPI() {
-            try {
-                const response = await fetch(
-                    "src/assets/json/contributions.json"
-                );
-                const result = await response.json();
-                const latestCommit = result.latest_commit; // Assuming this matches your JSON structure
-                setLatestCommit(latestCommit);
-            } catch (error) {
-                console.error("Failed to fetch contributions:", error);
-            } finally {
-                setLoading(false);
-            }
-        }
-
-        fetchContributionsFromAPI();
-    }, []);
+    const latestCommit = commit.latest_commit;
 
     return (
-        <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG">
+        <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG rounded">
             <div className="p-4 h-fit grid grid-cols-4 grid-rows-3 sm:grid-rows-2 gap-4 rounded customBorder my">
                 <div className="col-span-4 sm:col-span-3 p-2 text-center rounded customBorder align-items-center">
                     <h3 className="mb-4">(｀･ω･´)ﾉ</h3>
@@ -62,24 +43,29 @@ const Bento = () => {
                     </p>
                     <div className="progBlurLeft rounded absolute top-0"></div>
                 </div>
-                <div className="bento4 relative rounded p-4 col-span-4 sm:col-span-2 overflow-hidden">
-                    {loading ? (
-                        <p>Loading GitHub contributions...</p>
-                    ) : latestCommit ? (
-                        <div className="relative z-10 flex flex-col gap-6">
-                            <p>
-                                Latest GitHub commit in 
-                                <span className="font-bold"> {latestCommit.repository}</span>:
-                                <br />
-                                <span className="text-3xl">{latestCommit.message}</span>
-                            </p>
-                            <p>
-                                Committed on: <span>{new Date(latestCommit.date).toLocaleString()}</span>
-                            </p>
-                        </div>
-                    ) : (
-                        <p>No contributions found.</p>
-                    )}
+                <div className="bento4 bg-light dark:bg-bg relative rounded justify-between flex flex-col col-span-4 sm:col-span-2">
+                    <div className="textBox flex gap-2 flex-col p-4">
+                        <p className="text-2xl">
+                            Latest commit made in :
+                            <a
+                                href={`https://github.com/sarahthebest/${latestCommit.repository}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-bold hover:underline hover:text-orange"
+                            >
+                                {` ${latestCommit.repository}`}
+                            </a>
+                            <br />
+                        </p>
+                        <p>Commit message : {latestCommit.message}</p>
+                    </div>
+                    <p className="w-full thin rounded-b bg-orange/80 dark:bg-purple/80 p-4">
+                        Committed on:
+                        <br />
+                        <span>
+                            {new Date(latestCommit.date).toLocaleString()}
+                        </span>
+                    </p>
                 </div>
             </div>
         </section>
