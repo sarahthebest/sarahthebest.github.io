@@ -15,7 +15,7 @@ jobs:
         with:
           ref: main  
 
-      - name: Fetch repos with REST api
+      - name: Get latest commit
         run: |
           repos=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
           "https://api.github.com/users/sarahthebest/repos?per_page=100" | jq -r '.[] | select(.fork == false) | .name')
@@ -33,7 +33,6 @@ jobs:
             commit_message=$(echo "$commit" | jq -r '.commit.message')
             commit_date=$(echo "$commit" | jq -r '.commit.committer.date')
 
-            # Store the repository data
             repo_data_array+=("{\"repository\": \"$repo\", \"message\": \"$commit_message\", \"date\": \"$commit_date\"}")
 
             if [[ -n "$commit_date" ]]; then
@@ -45,7 +44,7 @@ jobs:
             fi
           done
 
-          json_output="{\"repositories\": [${repo_data_array[*]}], \"latest_commit\": {\"repository\": \"$latest_commit_repository\", \"message\": \"$latest_commit_message\", \"date\": \"$latest_commit_date\"}}"
+          json_output="{\"repositories\": [$(IFS=,; echo "${repo_data_array[*]}")], \"latest_commit\": {\"repository\": \"$latest_commit_repository\", \"message\": \"$latest_commit_message\", \"date\": \"$latest_commit_date\"}}"
           echo $json_output > src/assets/json/gh_data.json
 
       - name: Configure Git user
@@ -56,5 +55,5 @@ jobs:
       - name: Commit and Push to GitHub Pages branch
         run: |
           git add src/assets/json/gh_data.json
-          git commit -m "Update GitHub data" || echo "No changes to commit"
+          git commit -m "Update contributions data" || echo "No changes to commit"
           git push origin main
