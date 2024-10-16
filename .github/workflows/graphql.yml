@@ -18,7 +18,7 @@ jobs:
       - name: Fetch latest commit with REST API
         run: |
           repos=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
-          "https://api.github.com/users/sarahthebest/repos?per_page=100" | jq -r '.[].name')
+          "https://api.github.com/users/sarahthebest/repos?per_page=100" | jq -r '.[] | select(.fork == false) | .name')
 
           latest_commit_repository=""
           latest_commit_message=""
