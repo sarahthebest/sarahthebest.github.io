@@ -15,12 +15,15 @@ jobs:
         with:
           ref: main  
 
-      - name: Fetch repository data with REST API
+      - name: Fetch repos with REST api
         run: |
           repos=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
           "https://api.github.com/users/sarahthebest/repos?per_page=100" | jq -r '.[] | select(.fork == false) | .name')
 
           repo_data_array=()
+          latest_commit_repository=""
+          latest_commit_message=""
+          latest_commit_date=""
 
           for repo in $repos; do
             echo "Checking latest commit in repository: $repo"
@@ -30,10 +33,20 @@ jobs:
             commit_message=$(echo "$commit" | jq -r '.commit.message')
             commit_date=$(echo "$commit" | jq -r '.commit.committer.date')
 
+            # Store the repository data
             repo_data_array+=("{\"repository\": \"$repo\", \"message\": \"$commit_message\", \"date\": \"$commit_date\"}")
+
+            if [[ -n "$commit_date" ]]; then
+              if [[ -z "$latest_commit_date" || "$commit_date" > "$latest_commit_date" ]]; then
+                latest_commit_date="$commit_date"
+                latest_commit_message="$commit_message"
+                latest_commit_repository="$repo"
+              fi
+            fi
           done
 
-          echo "{\"repositories\": [${repo_data_array[*]}]}" > src/assets/json/gh_data.json
+          json_output="{\"repositories\": [${repo_data_array[*]}], \"latest_commit\": {\"repository\": \"$latest_commit_repository\", \"message\": \"$latest_commit_message\", \"date\": \"$latest_commit_date\"}}"
+          echo $json_output > src/assets/json/gh_data.json
 
       - name: Configure Git user
         run: |
