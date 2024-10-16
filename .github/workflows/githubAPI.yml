@@ -15,34 +15,25 @@ jobs:
         with:
           ref: main  
 
-      - name: Fetch latest commit with REST API
+      - name: Fetch repository data with REST API
         run: |
           repos=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
           "https://api.github.com/users/sarahthebest/repos?per_page=100" | jq -r '.[] | select(.fork == false) | .name')
 
-          latest_commit_repository=""
-          latest_commit_message=""
-          latest_commit_date=""
+          repo_data_array=()
 
           for repo in $repos; do
             echo "Checking latest commit in repository: $repo"
-
             commit=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
             "https://api.github.com/repos/sarahthebest/$repo/commits?per_page=1" | jq -r '.[0]')
-
+            
             commit_message=$(echo "$commit" | jq -r '.commit.message')
             commit_date=$(echo "$commit" | jq -r '.commit.committer.date')
 
-            if [[ -n "$commit_date" ]]; then
-              if [[ -z "$latest_commit_date" || "$commit_date" > "$latest_commit_date" ]]; then
-                latest_commit_date="$commit_date"
-                latest_commit_message="$commit_message"
-                latest_commit_repository="$repo"
-              fi
-            fi
+            repo_data_array+=("{\"repository\": \"$repo\", \"message\": \"$commit_message\", \"date\": \"$commit_date\"}")
           done
 
-          echo "{\"latest_commit\": {\"repository\": \"$latest_commit_repository\", \"message\": \"$latest_commit_message\", \"date\": \"$latest_commit_date\"}}" > src/assets/json/contributions.json
+          echo "{\"repositories\": [${repo_data_array[*]}]}" > src/assets/json/gh_data.json
 
       - name: Configure Git user
         run: |
@@ -51,6 +42,6 @@ jobs:
 
       - name: Commit and Push to GitHub Pages branch
         run: |
-          git add src/assets/json/contributions.json
-          git commit -m "Update contributions data" || echo "No changes to commit"
+          git add src/assets/json/gh_data.json
+          git commit -m "Update GitHub data" || echo "No changes to commit"
           git push origin main
