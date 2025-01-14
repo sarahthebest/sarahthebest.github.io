@@ -28,7 +28,7 @@ jobs:
           for repo in $repos; do
             echo "Checking latest commit in repository: $repo"
             commit=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
-            "https://api.github.com/repos/sarahthebest/$repo/commits?per_page=1" | jq -r '.[0]')
+            "https://api.github.com/repos/sarahthebest/$repo/commits?per_page=2" | jq -r '.[] | select(.commit.message != "Update contributions data") | .')
             
             commit_message=$(echo "$commit" | jq -r '.commit.message')
             commit_date=$(echo "$commit" | jq -r '.commit.committer.date')
