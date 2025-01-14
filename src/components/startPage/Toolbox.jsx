@@ -5,6 +5,7 @@ const Toolbox = () => {
     { text: "HTML 5", img: "./img/icons/html.webp" },
     { text: "CSS logo", img: "./img/icons/css.webp" },
     { text: "Javascript logo", img: "./img/icons/js.png" },
+    { text: "Typescript Logo", img: "./img/icons/ts.webp" },
     { text: "React logo", img: "./img/icons/react.webp" },
     { text: "Node logo", img: "./img/icons/node.webp" },
     { text: "GitHub logo", img: "./img/icons/gh.webp" },

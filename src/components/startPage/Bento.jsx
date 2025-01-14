@@ -9,14 +9,15 @@ const Bento = () => {
         <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG rounded">
             <div className="p-4 h-fit grid grid-cols-4 grid-rows-3 sm:grid-rows-2 gap-4 rounded customBorder my">
                 <div className="col-span-4 sm:col-span-3 p-2 text-center rounded customBorder align-items-center">
-                    <h3 className="mb-4">(｀･ω･´)ﾉ</h3>
+                    <h3 className="mb-4">ヾ(＾ ∇ ＾).</h3>
                     <p>
                         Hello there! I'm <span className="cursive">Sarah</span>,
                         a curious UX developer. Currently @Jensen YH learning
-                        frontend-development and web security. Passionate about
-                        bold fonts, purple, and flowers.
+                        frontend-development and web security. Passionate
+                        security, accessibility and bold fonts.
+                    <br />
+                        Currently seeking internship positions for summer 2025!
                     </p>
-                    <p>Currently seeking internship positions for fall 2024!</p>
                     <a
                         className="button hvr-grow-shadow customBorder rounded p-3 mt-2 dark:bg-dark bg-light"
                         href="./img/CV.pdf"
@@ -44,9 +45,10 @@ const Bento = () => {
                     <div className="progBlurLeft rounded absolute top-0"></div>
                 </div>
                 <div className="bento4 bg-light dark:bg-bg relative rounded justify-between flex flex-col col-span-4 sm:col-span-2">
-                    <div className="textBox flex gap-2 flex-col p-4">
+                    <div className="textBox flex gap-6 flex-col p-4">
                         <p className="text-2xl">
-                            Latest commit made in :
+                            Latest commit made in:
+                            <br />
                             <a
                                 href={`https://github.com/sarahthebest/${latestCommit.repository}`}
                                 target="_blank"
@@ -57,15 +59,10 @@ const Bento = () => {
                             </a>
                             <br />
                         </p>
-                        <p>Commit message : {latestCommit.message}</p>
+                        <p className="text-2xl">
+                            Commit message: <br /> "{latestCommit.message}"
+                        </p>
                     </div>
-                    <p className="w-full thin rounded-b bg-orange/80 dark:bg-purple/80 p-4">
-                        Committed on:
-                        <br />
-                        <span>
-                            {new Date(latestCommit.date).toLocaleString()}
-                        </span>
-                    </p>
                 </div>
             </div>
         </section>

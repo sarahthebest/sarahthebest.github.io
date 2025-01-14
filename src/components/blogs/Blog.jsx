@@ -14,8 +14,6 @@ const Blog = () => {
                     <p className="w-1/2 md:w-1/3">
                         A space for my reflections and insights. I explore
                         topics related to design, technology, and beyond.
-                        Writing helps me untangle my thoughts and see my work
-                        through a creative lens.
                     </p>
                 </section>
                 <section className="blogPosts grid grid-cols-2 gap-4">

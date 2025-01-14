@@ -14,10 +14,24 @@ const About = () => {
 
     const experiences = [
         {
+            company: "Mappi AI",
+            role: "Frontenddeveloper intern",
+            date: "2024 Nov",
+            endDate: "2025 Feb",
+            desc: "UX-design, React, Typescript, building components, redesigning pages.",
+        },
+        {
+            company: "Globy AI",
+            role: "Webdeveloper intern",
+            date: "2024 Sep",
+            endDate: "2024 Dec",
+            desc: "Internship i did alongside my studies. Worked with design and new AI tools to build websites",
+        },
+        {
             company: "Jensen Yrkeshögskola",
             role: "Frontenddeveloper - Websecurity",
             date: "2023 Aug",
-            endDate: "Present",
+            endDate: "2025 Jun",
             desc: "React, Styling libraries and Frameworks, Backend, Cybersecurity.",
         },
         {
