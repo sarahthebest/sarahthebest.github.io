@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import BG from "./common/Bg";
-import series from "../assets/img/HOTD.webp";
+import series from "../assets/img/TVshow.webp";
 import book from "../assets/img/book.webp";
 import { GiPotionBall } from "react-icons/gi";
 
