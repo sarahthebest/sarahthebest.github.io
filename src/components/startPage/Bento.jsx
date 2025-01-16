@@ -8,18 +8,18 @@ const Bento = () => {
     return (
         <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG rounded">
             <div className="p-4 h-fit grid grid-cols-4 grid-rows-3 sm:grid-rows-2 gap-4 rounded customBorder my">
-                <div className="col-span-4 sm:col-span-3 p-2 text-center rounded customBorder align-items-center">
+                <div className="col-span-4 sm:col-span-3 p-2 border text-center rounded customBorder align-items-center">
                     <h3 className="mb-4">ヾ(＾ ∇ ＾).</h3>
                     <p>
                         Hello there! I'm <span className="cursive">Sarah</span>,
                         a curious UX developer. Currently @Jensen YH learning
                         frontend-development and web security. Passionate
                         security, accessibility and bold fonts.
-                    <br />
+                        <br />
                         Currently seeking internship positions for summer 2025!
                     </p>
                     <a
-                        className="button hvr-grow-shadow customBorder rounded p-3 mt-2 dark:bg-dark bg-light"
+                        className="button hvr-grow-shadow customBorder border rounded p-3 mt-2 dark:bg-dark bg-light"
                         href="./img/CV.pdf"
                         target="_blank"
                         role="button"
@@ -44,24 +44,30 @@ const Bento = () => {
                     </p>
                     <div className="progBlurLeft rounded absolute top-0"></div>
                 </div>
-                <div className="bento4 bg-light dark:bg-bg relative rounded justify-between flex flex-col col-span-4 sm:col-span-2">
-                    <div className="textBox flex gap-6 flex-col p-4">
-                        <p className="text-2xl">
-                            Latest commit made in:
-                            <br />
-                            <a
-                                href={`https://github.com/sarahthebest/${latestCommit.repository}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-bold hover:underline hover:text-orange"
-                            >
-                                {` ${latestCommit.repository}`}
-                            </a>
-                            <br />
-                        </p>
-                        <p className="text-2xl">
-                            Commit message: <br /> "{latestCommit.message}"
-                        </p>
+                <div className="bento4 relative rounded justify-between customBorder border flex flex-col col-span-4 sm:col-span-2">
+                    <div className="textBox flex gap-6 flex-col rounded">
+                        <div className="bentoLabel bg-purple/50 customBorder w-fit border-r border-b border-t-0 p-2 rounded-br">
+                            <p>Latest GitHub Activity...</p>
+                        </div>
+                        <div className="textWrapper text-2xl ps-4 my-auto">
+                            <p>
+                                Latest commit made in:
+                                <br />
+                                <a
+                                    href={`https://github.com/sarahthebest/${latestCommit.repository}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-bold hover:underline hover:text-orange"
+                                >
+                                    {` ${latestCommit.repository}`}
+                                </a>
+                            </p>
+
+                            <p>
+                                <br />
+                                Commit message: <br /> "{latestCommit.message}"
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

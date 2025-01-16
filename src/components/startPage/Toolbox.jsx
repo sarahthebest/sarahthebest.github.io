@@ -30,7 +30,7 @@ const Toolbox = () => {
   return (
     <article 
     className="text-center relative bg-customBGDark dark:bg-customBG customBorder
-     rounded container-lg mx-auto p-0 flex-col flex cursor-default">
+     rounded container-lg mx-auto p-0 flex-col flex cursor-default border">
       <h3 className="w-full my-4">My toolbox</h3>
       <FadeIn selector="about-me w-full fade-in-section flex flex-col sm:grid p-10
        dark:border-borderColor border-darkBorder border border-l-0 border-r-0">
@@ -57,7 +57,7 @@ const Toolbox = () => {
             style={{ maxWidth: "400px" }}
           >
             {frontend.map((item, index) => (
-              <li key={index} className="tech bg-light/50 hvr-float rounded m-1 flex align-items-center customBorder">
+              <li key={index} className="tech bg-light/50 hvr-float rounded m-1 flex align-items-center  border">
                 <img
                   className="techLogo"
                   src={item.img}

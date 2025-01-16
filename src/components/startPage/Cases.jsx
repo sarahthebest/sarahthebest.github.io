@@ -14,7 +14,7 @@ const Cases = () => {
       <section
         id="projects"
         className="position-relative mt-14 bg-customBGDark dark:bg-customBG rounded projects
-        customBorder overflow-hidden container-lg mx-auto p-0 flex-column d-flex"
+        customBorder border overflow-hidden container-lg mx-auto p-0 flex-column d-flex"
       >
         <div className="projects text-center my-5">
           <h3 className="mb-3">What i've been up to</h3>
