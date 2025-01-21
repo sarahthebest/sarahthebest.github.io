@@ -4,6 +4,18 @@ import "./startPage.css";
 
 const Bento = () => {
     const latestCommit = commit.latest_commit;
+    const rawDates = latestCommit.date ? latestCommit.date.split(" ") : [];
+    const dates = rawDates.map(dateStr => new Date(dateStr)).filter(date => !isNaN(date.getTime()));
+
+    const date = dates.length ? new Date(Math.max(...dates.map(d => d.getTime()))) : null;
+
+    const formattedDay = date && !isNaN(date.getTime())
+        ? new Intl.DateTimeFormat("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+          }).format(date)
+        : "Unknown date";
 
     return (
         <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG rounded">
@@ -49,9 +61,9 @@ const Bento = () => {
                         <div className="bentoLabel bg-purple/50 customBorder w-fit border-r border-b border-t-0 p-2 rounded-br">
                             <p>Latest GitHub Activity...</p>
                         </div>
-                        <div className="textWrapper text-2xl ps-4 my-auto">
+                        <div className="textWrapper text-2xl ps-4 my-auto text-base">
                             <p>
-                                Latest commit made in:
+                                Latest commit made {formattedDay} in:
                                 <br />
                                 <a
                                     href={`https://github.com/sarahthebest/${latestCommit.repository}`}
