@@ -29,7 +29,7 @@
             "text2": "DrinkPedia, on the other hand, was a personal project I took on in July. I wanted to build something fun while also leveling up my skills. DrinkPedia fetches data from TheCocktailDB and was built using Chakra UI, a React component library that I found to be more flexible for custom UI needs. This project was a significant milestone for me because I was able to apply everything I had learned from RecipeFetcher while also experimenting with the design much more.",
             "end": "It’s been rewarding to see how far I’ve come in such a short time, from working on a school project to building something entirely on my own. With RecipeFetcher, I focused heavily on following best practices and following the assignment. But with DrinkPedia, I had more freedom to design and architect the application the way I wanted. Both projects can be found on my GitHub link in nav.",
             "img1":"https://raw.githubusercontent.com/sarahthebest/Recipefetcher/main/thumbnail.png",
-            "img2":"src/assets/img/drinkPediaPreview.gif"
+            "img2":"/assets/img/drinkPediaPreview.gif"
         }
     ]
 }
