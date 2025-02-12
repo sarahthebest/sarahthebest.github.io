@@ -6,7 +6,7 @@ const BackgroundCard = ({ project }) => {
     <div
       className="container-lg gap-1 pb-3 flex flex-col rounded dark:border-borderColor border-darkBorder 
       border mx-auto">
-        <div className="flex flex-row justify-between flex-wrap p-4">
+        <div className="flex flex-row justify-between flex-wrap px-4 pt-4">
           <h2 className="align-self-start">Background</h2>
           <p className="tag spanBorder px-3 rounded-full my-auto mx-3 p-0">
             {project.date}
@@ -14,7 +14,7 @@ const BackgroundCard = ({ project }) => {
       </div>
         <p className="px-4">{project.background}</p>
         <h2 className="px-4">Mission</h2>
-        <p className="px-4">{project.mission}</p>
+        <p className="px-4 pb-4">{project.mission}</p>
       {project.note && (
         <div
           className="note dark:border-borderColor border-darkBorder 

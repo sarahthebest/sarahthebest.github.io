@@ -9,7 +9,7 @@ const About = () => {
         seriesImg: series,
         seriesAlt: "House of the Dragon season 2",
         bookImg: book,
-        bookAlt: "Endymion - Dan Simmons",
+        bookAlt: "Tomorrow, and Tomorrow, and Tomorrow - Gabrielle Zevin",
     };
 
     const experiences = [
@@ -124,7 +124,7 @@ const About = () => {
                     className="col-span-3 sm:col-span-2 md:col-span-1 rounded overflow-hidden"
                 >
                     <img
-                        src="./img/milano.webp"
+                        src="src/assets/img/milano.webp"
                         className="h-full w-full"
                         alt="Me in Milano in front of the Duomo."
                     />

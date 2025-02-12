@@ -35,7 +35,7 @@ const PortfolioCase = () => {
               className="imgContainer overflow-y-scroll"
               style={{ height: "500px" }}
             >
-              <img src="./img/thumbnails\portfolio.webp" alt="" />
+              <img src="src/assets/img/thumbnails\portfolio.webp" alt="" />
             </div>
             <p>Flashback to my old portfolio.</p>
             <p>
@@ -62,7 +62,7 @@ const PortfolioCase = () => {
               minimize the amount of code needed in my CSS files.
             </p>
             <img
-              src="./img/snippet.webp"
+              src="src/assets/img/snippet.webp"
               className="w-5/6 mx-auto"
               alt="Code snippet"
             />
@@ -147,7 +147,7 @@ const PortfolioCase = () => {
               task less daunting.
             </p>
             <img
-              src="./img/gpt.webp"
+              src="src/assets/img/gpt.webp"
               className="w-3/6"
               alt="Graphic of me asking chat gpt for help in my darkest hours and moments..."
             />
@@ -168,7 +168,7 @@ const PortfolioCase = () => {
               iffy and are to be optimized.
             </p>
             <img
-              src="./img/pagespeed.png"
+              src="src/assets/img/pagespeed.png"
               className="w-5/6"
               alt="Screenshot of my pagespeed results."
             />

@@ -2,11 +2,11 @@ const BG = () => {
     return ( 
         <div id="headerBG" className="fixed m-0 p-0">
         <img
-          src="./img/headerBG.webp"
+          src="src/assets/img/headerBG.webp"
           srcSet="
-            ./img/headerBGtablet.webp 768w,
-            ./img/headerBGLaptop.webp 1024w,
-            ./img/headerBG.webp 1920w"
+            src/assets/img/headerBGtablet.webp 768w,
+            src/assets/img/headerBGLaptop.webp 1024w,
+            src/assets/img/headerBG.webp 1920w"
           sizes="(max-width: 480px) 480px,
          (max-width: 768px) 768px,
          (max-width: 1024px) 1024px,
