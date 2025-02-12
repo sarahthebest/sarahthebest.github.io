@@ -42,7 +42,7 @@ const Bento = () => {
                 <div className="bento2 col-span-2 sm:col-span-1 rounded overflow-hidden">
                     <img
                         className="selfie w-full h-full object-cover"
-                        src="./assets/img/selfie.webp"
+                        src="/img/selfie.webp"
                         alt="Selfie"
                     />
                 </div>
