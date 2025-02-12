@@ -12,31 +12,31 @@ const Velocity = () => {
 
   const wireframes = [
     {
-      src: "./assets/img/Lofi-home-1.webp",
+      src: "/img/Lofi-home-1.webp",
       alt: "Lofi prototype of the app homescreen",
     },
     {
-      src: "./assets/img/Lofi-home-2.webp",
+      src: "/img/Lofi-home-2.webp",
       alt: "Lofi prototype of the app homescreen subsection achievements.",
     },
     {
-      src: "./assets/img/Lofi-home.webp",
+      src: "/img/Lofi-home.webp",
       alt: "Lofi prototype of the app homescreen subsection goals.",
     },
     {
-      src: "./assets/img/Lofi-portfolio-1.webp",
+      src: "/img/Lofi-portfolio-1.webp",
       alt: "Lofi prototype of the app orders.",
     },
     {
-      src: "./assets/img/Lofi-portfolio.webp",
+      src: "/img/Lofi-portfolio.webp",
       alt: "Lofi prototype of the app portfolio.",
     },
     {
-      src: "./assets/img/Lofi-stock.webp",
+      src: "/img/Lofi-stock.webp",
       alt: "Lofi prototype of the screen of a stock.",
     },
     {
-      src: "./assets/img/lofi-stock2.webp",
+      src: "/img/lofi-stock2.webp",
       alt: "Lofi prototype of buying a stock.",
     },
   ];
@@ -91,7 +91,7 @@ const Velocity = () => {
             <div className="competitorAnalysis gap-2 flex flex-col">
               <h3>Competitor Analysis</h3>
               <img
-                src="./assets/img/competitor.webp"
+                src="/img/competitor.webp"
                 className="object-contain"
                 alt="Competitor analysis"
               />
@@ -129,12 +129,12 @@ const Velocity = () => {
               </p>
               <div className="personas gap-4 flex flex-col sm:flex-row w-full">
                 <img
-                  src="./assets/img/persona-trader.webp"
+                  src="/img/persona-trader.webp"
                   className="w-5/12"
                   alt="Persona of an experienced trader."
                 />
                 <img
-                  src="./assets/img/Persona-new.webp"
+                  src="/img/Persona-new.webp"
                   className="w-5/12"
                   alt="Persona of a new trader."
                 />
@@ -214,12 +214,12 @@ const Velocity = () => {
             </p>
             <div className="homescreen w-max gap-4 grid grid-cols-2 place-content-center content-center gap-10">
               <img
-                src="./assets/img/Lofi-home-1.webp"
+                src="/img/Lofi-home-1.webp"
                 className="frame h-96"
                 alt="Lofi view of the home screen."
               />
               <img
-                src="./assets/img/Homescreen.webp"
+                src="/img/Homescreen.webp"
                 className="frame h-96"
                 alt="Hifi version."
               />
@@ -234,12 +234,12 @@ const Velocity = () => {
             </p>
             <div className="homescreen w-max gap-4 grid grid-cols-2 place-content-center content-center">
               <img
-                src="./assets/img/Lofi-stock.webp"
+                src="/img/Lofi-stock.webp"
                 className="frame h-96"
                 alt="Lofi view of the stock screen"
               />
               <img
-                src="./assets/img/Stockscreen-chart.webp"
+                src="/img/Stockscreen-chart.webp"
                 className="frame h-96"
                 alt="Hifi version"
               />
