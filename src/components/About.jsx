@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import BG from "./common/Bg";
-import series from "/assets/img/TVshow.webp";
-import book from "/assets/img/book.webp";
+import series from "./assets/img/TVshow.webp";
+import book from "./assets/img/book.webp";
 import { GiPotionBall } from "react-icons/gi";
 
 const About = () => {
@@ -124,7 +124,7 @@ const About = () => {
                     className="col-span-3 sm:col-span-2 md:col-span-1 rounded overflow-hidden"
                 >
                     <img
-                        src="/assets/img/milano.webp"
+                        src="./assets/img/milano.webp"
                         className="h-full w-full"
                         alt="Me in Milano in front of the Duomo."
                     />

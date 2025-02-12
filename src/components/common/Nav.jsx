@@ -52,7 +52,7 @@ const Nav = () => {
                     <div className="bg-light dark:bg-bg hover:bg-gradient-to-tr to-purple from-orange w-full h-full rounded-full h-15 p-3 w-5/5 flex items-center justify-center">
                         <img
                             className="logo dark:invert invert-0 hover:invert"
-                            src="/assets/img/logo.webp"
+                            src="./assets/img/logo.webp"
                             alt="Personal logo."
                         />
                     </div>

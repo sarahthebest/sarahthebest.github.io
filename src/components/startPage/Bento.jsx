@@ -32,7 +32,7 @@ const Bento = () => {
                     </p>
                     <a
                         className="button hvr-grow-shadow customBorder border rounded p-3 mt-2 dark:bg-dark bg-light"
-                        href="/assets/img/CV.pdf"
+                        href="./assets/img/CV.pdf"
                         target="_blank"
                         role="button"
                     >
@@ -42,7 +42,7 @@ const Bento = () => {
                 <div className="bento2 col-span-2 sm:col-span-1 rounded overflow-hidden">
                     <img
                         className="selfie w-full h-full object-cover"
-                        src="/assets/img/selfie.webp"
+                        src="./assets/img/selfie.webp"
                         alt="Selfie"
                     />
                 </div>
