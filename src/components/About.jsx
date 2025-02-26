@@ -7,12 +7,19 @@ import { GiPotionBall } from "react-icons/gi";
 const About = () => {
     const media = {
         seriesImg: series,
-        seriesAlt: "House of the Dragon season 2",
+        seriesAlt: "Severance",
         bookImg: book,
         bookAlt: "Tomorrow, and Tomorrow, and Tomorrow - Gabrielle Zevin",
     };
 
     const experiences = [
+        {
+            company: "Saab",
+            role: "UX intern at Swexia",
+            date: "2025 Feb",
+            endDate: "Current",
+            desc: "",
+        },
         {
             company: "Mappi AI",
             role: "Frontenddeveloper intern",
