@@ -12,8 +12,8 @@ const Blog = () => {
                 <section className="blogIntro flex flex-row justify-between">
                     <h1>Writing</h1>
                     <p className="w-1/2 md:w-1/3">
-                        A space for my reflections and insights. I explore
-                        topics related to design, technology, and beyond.
+                        A space for my reflections and <span className="cursive">insights</span>. I write about
+                        topics related to design, tech and beyond.
                     </p>
                 </section>
                 <section className="blogPosts grid grid-cols-2 gap-4">
