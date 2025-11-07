@@ -15,9 +15,16 @@ const About = () => {
     const experiences = [
         {
             company: "Saab",
+            role: "UX Designer at Swexia",
+            date: "2025 Jun",
+            endDate: "Current",
+            desc: "",
+        },
+        {
+            company: "Saab",
             role: "UX intern at Swexia",
             date: "2025 Feb",
-            endDate: "Current",
+            endDate: "2025 Jun",
             desc: "",
         },
         {
@@ -118,11 +125,8 @@ const About = () => {
                 >
                     <p className="text-wrap">
                         Welcome to the about <span className="cursive">me</span>{" "}
-                        page. When I'm not in front of the computer I enjoy
-                        gaming, reading, and catching up on my favorite shows. I
-                        also go outside occasionally and when I do, I like to
-                        appreciate the nature around me and take pictures of
-                        pretty flowers.
+                        page. When I'm not by my puter I enjoy
+                        gaming, reading, and catching up on my favorite shows.
                     </p>
                     <p>Go check out my projects!</p>
                 </div>
