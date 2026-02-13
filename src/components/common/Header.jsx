@@ -42,7 +42,7 @@ const Header = () => {
               >
                 UX Designer.
                 <br />
-                Web Developer.
+                UX Developer.
                 <br />
                 Problemsolver.
                 <br />
