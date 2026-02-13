@@ -73,7 +73,7 @@ const Nav = () => {
                             </Link>
                         </li>
                     ))}
-                    <li className="nav-item my-auto">
+                    <li className="nav-item my-auto cursor-pointer">
                         <div className="toggle ms-4 my-auto cursor-pointer">
                             <input
                                 type="checkbox"
