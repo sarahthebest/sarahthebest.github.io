@@ -15,9 +15,16 @@ const About = () => {
     const experiences = [
         {
             company: "Saab",
+            role: "UX Designer at Digital Battlespace Systems",
+            date: "2026 Feb",
+            endDate: "Current",
+            desc: "",
+        },
+        {
+            company: "Saab",
             role: "UX Designer at Swexia",
             date: "2025 Jun",
-            endDate: "Current",
+            endDate: "2026 Feb",
             desc: "",
         },
         {
@@ -128,7 +135,6 @@ const About = () => {
                         page. When I'm not by my puter I enjoy
                         gaming, reading, and catching up on my favorite shows.
                     </p>
-                    <p>Go check out my projects!</p>
                 </div>
                 <div
                     style={{ height: "300px" }}

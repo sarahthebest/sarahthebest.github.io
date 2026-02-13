@@ -40,9 +40,9 @@ const Header = () => {
                 className="bg-gradient-to-r to-purple from-orange
                inline-block text-transparent bg-clip-text"
               >
-                Web developer.
+                UX Designer.
                 <br />
-                UX designer.
+                Web Developer.
                 <br />
                 Problemsolver.
                 <br />

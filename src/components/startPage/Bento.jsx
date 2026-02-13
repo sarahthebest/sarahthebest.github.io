@@ -24,17 +24,9 @@ const Bento = () => {
                     <h3 className="mb-4">ヾ(＾ ∇ ＾).</h3>
                     <p>
                         Hello there! I'm <span className="cursive">Sarah</span>,
-                        a curious UX developer. Currently @Saab curating modern and intuitive experiences ^^ .
+                        a junior UX Designer @Saab designing for mission-critical systems.
                         
                     </p>
-                    <a
-                        className="button hvr-grow-shadow customBorder border rounded p-3 mt-2 dark:bg-dark bg-light"
-                        href="./assets/img/CV.pdf"
-                        target="_blank"
-                        role="button"
-                    >
-                        My resume
-                    </a>
                 </div>
                 <div className="bento2 col-span-2 sm:col-span-1 rounded overflow-hidden">
                     <img

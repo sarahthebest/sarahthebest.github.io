@@ -74,7 +74,7 @@ const Nav = () => {
                         </li>
                     ))}
                     <li className="nav-item my-auto">
-                        <div className="toggle ms-4 my-auto">
+                        <div className="toggle ms-4 my-auto cursor-pointer">
                             <input
                                 type="checkbox"
                                 className="checkbox"
