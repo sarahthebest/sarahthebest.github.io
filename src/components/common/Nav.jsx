@@ -84,7 +84,7 @@ const Nav = () => {
                             />
                             <label
                                 htmlFor="checkbox"
-                                className="checkbox-label rounded-full flex relative dark:outline-dark outline-light outline-2 outline"
+                                className="checkbox-label rounded-full flex relative dark:outline-dark outline-light outline-2 outline cursor-pointer"
                             >
                                 <div
                                     className="absolute"
@@ -94,7 +94,7 @@ const Nav = () => {
                             </label>
                             <label
                                 htmlFor="checkbox"
-                                className="toggle-label"
+                                className="toggle-label cursor-pointer"
                             ></label>
                         </div>
                     </li>
