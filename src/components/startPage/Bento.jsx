@@ -18,13 +18,13 @@ const Bento = () => {
         : "Unknown date";
 
     return (
-        <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG rounded">
+        <section className="container-lg mx-auto p-0 bg-customBGDark dark:bg-customBG rounded customBorder border">
             <div className="p-4 h-fit grid grid-cols-4 grid-rows-3 sm:grid-rows-2 gap-4 rounded customBorder my">
                 <div className="col-span-4 sm:col-span-3 p-2 border text-center rounded customBorder align-items-center">
                     <h3 className="mb-4">ヾ(＾ ∇ ＾).</h3>
                     <p>
                         Hello there! I'm <span className="cursive">Sarah</span>,
-                        a junior UX Designer @Saab designing for mission-critical systems.
+                        a UX Designer @Saab. <br/> You have found my website~ feel free to look around :^)
                         
                     </p>
                 </div>

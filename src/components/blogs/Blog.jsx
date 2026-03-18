@@ -8,12 +8,11 @@ const Blog = () => {
     return (
         <>
             <ProjectBG />
-            <main className="blog mt-32 px-6 lg:px-0  pointer-events-auto flex flex-col gap-4 rounded mx-auto container-lg">
-                <section className="blogIntro flex flex-row justify-between">
-                    <h1>Writing</h1>
+            <main className="blog mt-32 lg:px-0 pointer-events-auto flex flex-col gap-2 rounded mx-auto container-lg">
+                <section className="blogIntro flex flex-col gap-0">
+                    <h1 className="mb-0">Writing</h1>
                     <p className="w-1/2 md:w-1/3">
-                        A space for my reflections and <span className="cursive">insights</span>. I write about
-                        topics related to design, tech and beyond.
+                        A space for my yapping and <span className="cursive">insights</span>.
                     </p>
                 </section>
                 <section className="blogPosts grid grid-cols-2 gap-4">

@@ -29,8 +29,8 @@ const Header = () => {
               </span>
             </p>
             <div className="onlineBar ms-0 rounded-full relative spanBorder customBorder align-items-center flex flex-row justify-content-between">
-              <div className="greenCircle ms-1 rounded-full absolute start-0"></div>
-              <p className="m-0 mono">Online</p>
+              <div className="greenCircle ms-2 rounded-full absolute start-0"></div>
+              <p className="ms-4 mono">Online</p>
             </div>
           </div>
           <div className="wrappertitle flex flex-col gap-2">

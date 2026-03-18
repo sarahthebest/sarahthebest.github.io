@@ -224,7 +224,7 @@
     backdrop-filter: blur(10px);
 }
 .customBorder {
-    border-color: #1717175d;
+    border-color: #a9a9a981;
 }
 .mountain {
     filter: blur(0px);
@@ -301,7 +301,7 @@ body.darkMode .circle3 {
     );
 }
 body.darkMode .customBorder {
-    border-color: rgba(255, 255, 255, 0.389);
+    border-color: #4d4d4d85;
 }
 
 /* animations */

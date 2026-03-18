@@ -1,6 +1,5 @@
 import Header from "./common/Header";
 import Bento from "./startPage/Bento";
-import Cases from "./startPage/Cases";
 import Toolbox from "./startPage/Toolbox";
 
 const Home = () => {
@@ -9,7 +8,6 @@ const Home = () => {
         <Header />
         <Bento />
         <Toolbox/>
-        <Cases />
         </div>
      );
 }
